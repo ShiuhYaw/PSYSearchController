@@ -1,0 +1,724 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		21A2EAA21DD7631600DCB5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA11DD7631600DCB5BA /* main.m */; };
+		21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA41DD7631600DCB5BA /* AppDelegate.m */; };
+		21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA71DD7631600DCB5BA /* ViewController.m */; };
+		21A2EAAB1DD7631600DCB5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAA91DD7631600DCB5BA /* Main.storyboard */; };
+		21A2EAAD1DD7631600DCB5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */; };
+		21A2EAB01DD7631600DCB5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAAE1DD7631600DCB5BA /* LaunchScreen.storyboard */; };
+		21A2EABB1DD7631600DCB5BA /* PSYSearchControllerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EABA1DD7631600DCB5BA /* PSYSearchControllerTests.m */; };
+		21A2EAC61DD7631600DCB5BA /* PSYSearchControllerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAC51DD7631600DCB5BA /* PSYSearchControllerUITests.m */; };
+		21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAE81DD7675200DCB5BA /* PSYBaseTableViewController.m */; };
+		21A2EAEC1DD767E300DCB5BA /* PSYPlace.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAEB1DD767E300DCB5BA /* PSYPlace.m */; };
+		21A2EAEF1DD769A900DCB5BA /* PSYSearchTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAEE1DD769A900DCB5BA /* PSYSearchTableViewController.m */; };
+		21A2EAF21DD769EE00DCB5BA /* PSYSearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAF11DD769EE00DCB5BA /* PSYSearchResultViewController.m */; };
+		21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAF41DD76AF300DCB5BA /* PSYSearchWireframe.m */; };
+		21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAF91DD76C3900DCB5BA /* PSYSearchPresenter.m */; };
+		21A2EB001DD76CE800DCB5BA /* PSYSearchInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAFF1DD76CE800DCB5BA /* PSYSearchInteractor.m */; };
+		21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB021DD76D4F00DCB5BA /* PSYPlaceDataManager.m */; };
+		21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB051DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m */; };
+		21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB081DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		21A2EAB71DD7631600DCB5BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21A2EA951DD7631600DCB5BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21A2EA9C1DD7631600DCB5BA;
+			remoteInfo = PSYSearchController;
+		};
+		21A2EAC21DD7631600DCB5BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 21A2EA951DD7631600DCB5BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 21A2EA9C1DD7631600DCB5BA;
+			remoteInfo = PSYSearchController;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		21A2EA9D1DD7631600DCB5BA /* PSYSearchController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSYSearchController.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A2EAA11DD7631600DCB5BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		21A2EAA31DD7631600DCB5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		21A2EAA41DD7631600DCB5BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		21A2EAA61DD7631600DCB5BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		21A2EAA71DD7631600DCB5BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		21A2EAAA1DD7631600DCB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		21A2EAAF1DD7631600DCB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		21A2EAB11DD7631600DCB5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A2EAB61DD7631600DCB5BA /* PSYSearchControllerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSYSearchControllerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A2EABA1DD7631600DCB5BA /* PSYSearchControllerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSYSearchControllerTests.m; sourceTree = "<group>"; };
+		21A2EABC1DD7631600DCB5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A2EAC11DD7631600DCB5BA /* PSYSearchControllerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PSYSearchControllerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		21A2EAC51DD7631600DCB5BA /* PSYSearchControllerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PSYSearchControllerUITests.m; sourceTree = "<group>"; };
+		21A2EAC71DD7631600DCB5BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21A2EAE71DD7675200DCB5BA /* PSYBaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYBaseTableViewController.h; sourceTree = "<group>"; };
+		21A2EAE81DD7675200DCB5BA /* PSYBaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYBaseTableViewController.m; sourceTree = "<group>"; };
+		21A2EAEA1DD767E300DCB5BA /* PSYPlace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYPlace.h; sourceTree = "<group>"; };
+		21A2EAEB1DD767E300DCB5BA /* PSYPlace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYPlace.m; sourceTree = "<group>"; };
+		21A2EAED1DD769A900DCB5BA /* PSYSearchTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchTableViewController.h; sourceTree = "<group>"; };
+		21A2EAEE1DD769A900DCB5BA /* PSYSearchTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchTableViewController.m; sourceTree = "<group>"; };
+		21A2EAF01DD769EE00DCB5BA /* PSYSearchResultViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchResultViewController.h; sourceTree = "<group>"; };
+		21A2EAF11DD769EE00DCB5BA /* PSYSearchResultViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchResultViewController.m; sourceTree = "<group>"; };
+		21A2EAF31DD76AF300DCB5BA /* PSYSearchWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchWireframe.h; sourceTree = "<group>"; };
+		21A2EAF41DD76AF300DCB5BA /* PSYSearchWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchWireframe.m; sourceTree = "<group>"; };
+		21A2EAF61DD76B2400DCB5BA /* PSYSearchViewInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSYSearchViewInterface.h; sourceTree = "<group>"; };
+		21A2EAF71DD76B9A00DCB5BA /* PSYSearchModuleInterface.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PSYSearchModuleInterface.h; sourceTree = "<group>"; };
+		21A2EAF81DD76C3900DCB5BA /* PSYSearchPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchPresenter.h; sourceTree = "<group>"; };
+		21A2EAF91DD76C3900DCB5BA /* PSYSearchPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchPresenter.m; sourceTree = "<group>"; };
+		21A2EAFB1DD76C7B00DCB5BA /* PSYSearchInteractorIO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchInteractorIO.h; sourceTree = "<group>"; };
+		21A2EAFE1DD76CE800DCB5BA /* PSYSearchInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchInteractor.h; sourceTree = "<group>"; };
+		21A2EAFF1DD76CE800DCB5BA /* PSYSearchInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchInteractor.m; sourceTree = "<group>"; };
+		21A2EB011DD76D4F00DCB5BA /* PSYPlaceDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYPlaceDataManager.h; sourceTree = "<group>"; };
+		21A2EB021DD76D4F00DCB5BA /* PSYPlaceDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYPlaceDataManager.m; sourceTree = "<group>"; };
+		21A2EB041DD76DCD00DCB5BA /* PSYSearchDismissalTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchDismissalTransition.h; sourceTree = "<group>"; };
+		21A2EB051DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchDismissalTransition.m; sourceTree = "<group>"; };
+		21A2EB071DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchPresentationTransistion.h; sourceTree = "<group>"; };
+		21A2EB081DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchPresentationTransistion.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		21A2EA9A1DD7631600DCB5BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EAB31DD7631600DCB5BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EABE1DD7631600DCB5BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		21A2EA941DD7631600DCB5BA = {
+			isa = PBXGroup;
+			children = (
+				21A2EA9F1DD7631600DCB5BA /* PSYSearchController */,
+				21A2EAB91DD7631600DCB5BA /* PSYSearchControllerTests */,
+				21A2EAC41DD7631600DCB5BA /* PSYSearchControllerUITests */,
+				21A2EA9E1DD7631600DCB5BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		21A2EA9E1DD7631600DCB5BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EA9D1DD7631600DCB5BA /* PSYSearchController.app */,
+				21A2EAB61DD7631600DCB5BA /* PSYSearchControllerTests.xctest */,
+				21A2EAC11DD7631600DCB5BA /* PSYSearchControllerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		21A2EA9F1DD7631600DCB5BA /* PSYSearchController */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAE21DD7669A00DCB5BA /* Common */,
+				21A2EAD71DD7664700DCB5BA /* Modules */,
+				21A2EAA31DD7631600DCB5BA /* AppDelegate.h */,
+				21A2EAA41DD7631600DCB5BA /* AppDelegate.m */,
+				21A2EAA61DD7631600DCB5BA /* ViewController.h */,
+				21A2EAA71DD7631600DCB5BA /* ViewController.m */,
+				21A2EAA91DD7631600DCB5BA /* Main.storyboard */,
+				21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */,
+				21A2EAAE1DD7631600DCB5BA /* LaunchScreen.storyboard */,
+				21A2EAB11DD7631600DCB5BA /* Info.plist */,
+				21A2EAA01DD7631600DCB5BA /* Supporting Files */,
+			);
+			path = PSYSearchController;
+			sourceTree = "<group>";
+		};
+		21A2EAA01DD7631600DCB5BA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAA11DD7631600DCB5BA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		21A2EAB91DD7631600DCB5BA /* PSYSearchControllerTests */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EABA1DD7631600DCB5BA /* PSYSearchControllerTests.m */,
+				21A2EABC1DD7631600DCB5BA /* Info.plist */,
+			);
+			path = PSYSearchControllerTests;
+			sourceTree = "<group>";
+		};
+		21A2EAC41DD7631600DCB5BA /* PSYSearchControllerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAC51DD7631600DCB5BA /* PSYSearchControllerUITests.m */,
+				21A2EAC71DD7631600DCB5BA /* Info.plist */,
+			);
+			path = PSYSearchControllerUITests;
+			sourceTree = "<group>";
+		};
+		21A2EAD71DD7664700DCB5BA /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAD81DD7664700DCB5BA /* Search */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		21A2EAD81DD7664700DCB5BA /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAD91DD7664700DCB5BA /* Application Logic */,
+				21A2EADC1DD7664700DCB5BA /* Module Interface */,
+				21A2EADD1DD7664700DCB5BA /* User Interface */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		21A2EAD91DD7664700DCB5BA /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EADA1DD7664700DCB5BA /* Interactor */,
+				21A2EADB1DD7664700DCB5BA /* Manager */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		21A2EADA1DD7664700DCB5BA /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAFB1DD76C7B00DCB5BA /* PSYSearchInteractorIO.h */,
+				21A2EAFE1DD76CE800DCB5BA /* PSYSearchInteractor.h */,
+				21A2EAFF1DD76CE800DCB5BA /* PSYSearchInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		21A2EADB1DD7664700DCB5BA /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EB011DD76D4F00DCB5BA /* PSYPlaceDataManager.h */,
+				21A2EB021DD76D4F00DCB5BA /* PSYPlaceDataManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		21A2EADC1DD7664700DCB5BA /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAF71DD76B9A00DCB5BA /* PSYSearchModuleInterface.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		21A2EADD1DD7664700DCB5BA /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EADE1DD7664700DCB5BA /* Presenter */,
+				21A2EADF1DD7664700DCB5BA /* Transaction */,
+				21A2EAE01DD7664700DCB5BA /* View */,
+				21A2EAE11DD7664700DCB5BA /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		21A2EADE1DD7664700DCB5BA /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAF81DD76C3900DCB5BA /* PSYSearchPresenter.h */,
+				21A2EAF91DD76C3900DCB5BA /* PSYSearchPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		21A2EADF1DD7664700DCB5BA /* Transaction */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EB041DD76DCD00DCB5BA /* PSYSearchDismissalTransition.h */,
+				21A2EB051DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m */,
+				21A2EB071DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.h */,
+				21A2EB081DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m */,
+			);
+			path = Transaction;
+			sourceTree = "<group>";
+		};
+		21A2EAE01DD7664700DCB5BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAED1DD769A900DCB5BA /* PSYSearchTableViewController.h */,
+				21A2EAEE1DD769A900DCB5BA /* PSYSearchTableViewController.m */,
+				21A2EAF01DD769EE00DCB5BA /* PSYSearchResultViewController.h */,
+				21A2EAF11DD769EE00DCB5BA /* PSYSearchResultViewController.m */,
+				21A2EAF61DD76B2400DCB5BA /* PSYSearchViewInterface.h */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		21A2EAE11DD7664700DCB5BA /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAF31DD76AF300DCB5BA /* PSYSearchWireframe.h */,
+				21A2EAF41DD76AF300DCB5BA /* PSYSearchWireframe.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		21A2EAE21DD7669A00DCB5BA /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAE31DD7669A00DCB5BA /* Constant */,
+				21A2EAE41DD7669A00DCB5BA /* Extension */,
+				21A2EAE51DD7669A00DCB5BA /* Model */,
+				21A2EAE61DD7670200DCB5BA /* View */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		21A2EAE31DD7669A00DCB5BA /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
+		21A2EAE41DD7669A00DCB5BA /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		21A2EAE51DD7669A00DCB5BA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAEA1DD767E300DCB5BA /* PSYPlace.h */,
+				21A2EAEB1DD767E300DCB5BA /* PSYPlace.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		21A2EAE61DD7670200DCB5BA /* View */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EAE71DD7675200DCB5BA /* PSYBaseTableViewController.h */,
+				21A2EAE81DD7675200DCB5BA /* PSYBaseTableViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		21A2EA9C1DD7631600DCB5BA /* PSYSearchController */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A2EACA1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchController" */;
+			buildPhases = (
+				21A2EA991DD7631600DCB5BA /* Sources */,
+				21A2EA9A1DD7631600DCB5BA /* Frameworks */,
+				21A2EA9B1DD7631600DCB5BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PSYSearchController;
+			productName = PSYSearchController;
+			productReference = 21A2EA9D1DD7631600DCB5BA /* PSYSearchController.app */;
+			productType = "com.apple.product-type.application";
+		};
+		21A2EAB51DD7631600DCB5BA /* PSYSearchControllerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A2EACD1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerTests" */;
+			buildPhases = (
+				21A2EAB21DD7631600DCB5BA /* Sources */,
+				21A2EAB31DD7631600DCB5BA /* Frameworks */,
+				21A2EAB41DD7631600DCB5BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A2EAB81DD7631600DCB5BA /* PBXTargetDependency */,
+			);
+			name = PSYSearchControllerTests;
+			productName = PSYSearchControllerTests;
+			productReference = 21A2EAB61DD7631600DCB5BA /* PSYSearchControllerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		21A2EAC01DD7631600DCB5BA /* PSYSearchControllerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 21A2EAD01DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerUITests" */;
+			buildPhases = (
+				21A2EABD1DD7631600DCB5BA /* Sources */,
+				21A2EABE1DD7631600DCB5BA /* Frameworks */,
+				21A2EABF1DD7631600DCB5BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				21A2EAC31DD7631600DCB5BA /* PBXTargetDependency */,
+			);
+			name = PSYSearchControllerUITests;
+			productName = PSYSearchControllerUITests;
+			productReference = 21A2EAC11DD7631600DCB5BA /* PSYSearchControllerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		21A2EA951DD7631600DCB5BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = "Shiuh Yaw Phang";
+				TargetAttributes = {
+					21A2EA9C1DD7631600DCB5BA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+					};
+					21A2EAB51DD7631600DCB5BA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21A2EA9C1DD7631600DCB5BA;
+					};
+					21A2EAC01DD7631600DCB5BA = {
+						CreatedOnToolsVersion = 8.0;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 21A2EA9C1DD7631600DCB5BA;
+					};
+				};
+			};
+			buildConfigurationList = 21A2EA981DD7631600DCB5BA /* Build configuration list for PBXProject "PSYSearchController" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 21A2EA941DD7631600DCB5BA;
+			productRefGroup = 21A2EA9E1DD7631600DCB5BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				21A2EA9C1DD7631600DCB5BA /* PSYSearchController */,
+				21A2EAB51DD7631600DCB5BA /* PSYSearchControllerTests */,
+				21A2EAC01DD7631600DCB5BA /* PSYSearchControllerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		21A2EA9B1DD7631600DCB5BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A2EAB01DD7631600DCB5BA /* LaunchScreen.storyboard in Resources */,
+				21A2EAAD1DD7631600DCB5BA /* Assets.xcassets in Resources */,
+				21A2EAAB1DD7631600DCB5BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EAB41DD7631600DCB5BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EABF1DD7631600DCB5BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		21A2EA991DD7631600DCB5BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */,
+				21A2EAEF1DD769A900DCB5BA /* PSYSearchTableViewController.m in Sources */,
+				21A2EAF21DD769EE00DCB5BA /* PSYSearchResultViewController.m in Sources */,
+				21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */,
+				21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */,
+				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
+				21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */,
+				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
+				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
+				21A2EAA21DD7631600DCB5BA /* main.m in Sources */,
+				21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */,
+				21A2EAEC1DD767E300DCB5BA /* PSYPlace.m in Sources */,
+				21A2EB001DD76CE800DCB5BA /* PSYSearchInteractor.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EAB21DD7631600DCB5BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A2EABB1DD7631600DCB5BA /* PSYSearchControllerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		21A2EABD1DD7631600DCB5BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				21A2EAC61DD7631600DCB5BA /* PSYSearchControllerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		21A2EAB81DD7631600DCB5BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21A2EA9C1DD7631600DCB5BA /* PSYSearchController */;
+			targetProxy = 21A2EAB71DD7631600DCB5BA /* PBXContainerItemProxy */;
+		};
+		21A2EAC31DD7631600DCB5BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 21A2EA9C1DD7631600DCB5BA /* PSYSearchController */;
+			targetProxy = 21A2EAC21DD7631600DCB5BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		21A2EAA91DD7631600DCB5BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21A2EAAA1DD7631600DCB5BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		21A2EAAE1DD7631600DCB5BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				21A2EAAF1DD7631600DCB5BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		21A2EAC81DD7631600DCB5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		21A2EAC91DD7631600DCB5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		21A2EACB1DD7631600DCB5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PSYSearchController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		21A2EACC1DD7631600DCB5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PSYSearchController/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchController;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		21A2EACE1DD7631600DCB5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PSYSearchControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSYSearchController.app/PSYSearchController";
+			};
+			name = Debug;
+		};
+		21A2EACF1DD7631600DCB5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PSYSearchControllerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchControllerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PSYSearchController.app/PSYSearchController";
+			};
+			name = Release;
+		};
+		21A2EAD11DD7631600DCB5BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PSYSearchControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSYSearchController;
+			};
+			name = Debug;
+		};
+		21A2EAD21DD7631600DCB5BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = PSYSearchControllerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yaw.PSYSearchControllerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = PSYSearchController;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		21A2EA981DD7631600DCB5BA /* Build configuration list for PBXProject "PSYSearchController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A2EAC81DD7631600DCB5BA /* Debug */,
+				21A2EAC91DD7631600DCB5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		21A2EACA1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A2EACB1DD7631600DCB5BA /* Debug */,
+				21A2EACC1DD7631600DCB5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		21A2EACD1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A2EACE1DD7631600DCB5BA /* Debug */,
+				21A2EACF1DD7631600DCB5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		21A2EAD01DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				21A2EAD11DD7631600DCB5BA /* Debug */,
+				21A2EAD21DD7631600DCB5BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 21A2EA951DD7631600DCB5BA /* Project object */;
+}
