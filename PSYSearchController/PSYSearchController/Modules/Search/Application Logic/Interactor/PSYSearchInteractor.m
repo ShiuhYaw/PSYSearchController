@@ -8,6 +8,21 @@
 
 #import "PSYSearchInteractor.h"
 
+@interface PSYSearchInteractor()
+
+@property (nonatomic, strong) PSYPlaceDataManager *dataManager;
+
+@end
+
 @implementation PSYSearchInteractor
+
+- (instancetype)initDataManager:(PSYPlaceDataManager *)dataManager
+{
+    self = [super init];
+    if (self) {
+        _dataManager = dataManager;
+    }
+    return self;
+}
 
 @end

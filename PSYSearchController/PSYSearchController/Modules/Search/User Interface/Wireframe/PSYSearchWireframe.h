@@ -7,7 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
+
+@class PSYSearchPresenter;
+@class PSYSearchTableViewController;
+@class PSYRootWireframe;
 
 @interface PSYSearchWireframe : NSObject
+
+@property (nonatomic, strong) PSYSearchPresenter *searchPresenter;
+@property (nonatomic, strong) PSYRootWireframe *rootWireframe;
+
+- (void)presentSearchInterfaceFromWindow:(UIWindow *)window;
 
 @end

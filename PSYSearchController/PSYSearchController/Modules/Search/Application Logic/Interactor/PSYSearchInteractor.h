@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PSYSearchInteractorIO.h"
 
-@interface PSYSearchInteractor : NSObject
+@class PSYPlaceDataManager;
+
+@interface PSYSearchInteractor : NSObject <PSYSearchInteractorInput>
+
+@property (nonatomic, weak) id<PSYSearchInteractorOutput> output;
+
+- (instancetype)initDataManager:(PSYPlaceDataManager *)dataManager;
 
 @end

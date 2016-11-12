@@ -10,4 +10,7 @@
 
 @implementation PSYSearchWireframe
 
+- (void)presentSearchInterfaceFromWindow:(UIWindow *)window {
+    
+}
 @end

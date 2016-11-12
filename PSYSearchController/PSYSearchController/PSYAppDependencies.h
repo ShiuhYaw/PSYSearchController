@@ -1,5 +1,5 @@
 //
-//  PSYPlaceDataManager.h
+//  PSYAppDependencies.h
 //  PSYSearchController
 //
 //  Created by Shiuh Yaw Phang on 12/11/2016.
@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@class PSYDataStore;
+@interface PSYAppDependencies : NSObject
 
-@interface PSYPlaceDataManager : NSObject
-
-@property (nonatomic, strong) PSYDataStore *dataStore;
+- (void)installRootViewControllerInWindow:(UIWindow *)window;
 
 @end

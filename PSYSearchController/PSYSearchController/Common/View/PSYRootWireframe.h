@@ -1,5 +1,5 @@
 //
-//  PSYPlaceDataManager.h
+//  PSYRootWireframe.h
 //  PSYSearchController
 //
 //  Created by Shiuh Yaw Phang on 12/11/2016.
@@ -8,10 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@class PSYDataStore;
-
-@interface PSYPlaceDataManager : NSObject
-
-@property (nonatomic, strong) PSYDataStore *dataStore;
+@interface PSYRootWireframe : NSObject
 
 @end

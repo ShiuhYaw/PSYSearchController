@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PSYSearchModuleInterface.h"
+#import "PSYSearchInteractorIO.h"
+#import "PSYSearchWireframe.h"
 
-@interface PSYSearchPresenter : NSObject
+@interface PSYSearchPresenter : NSObject <PSYSearchInteractorOutput, PSYSearchModuleInterface>
+
+@property (nonatomic, strong) id<PSYSearchInteractorInput> searchInteractor;
+@property (nonatomic, strong) PSYSearchWireframe *searchWireframe;
 
 @end

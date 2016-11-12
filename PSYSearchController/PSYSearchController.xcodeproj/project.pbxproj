@@ -25,6 +25,9 @@
 		21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB021DD76D4F00DCB5BA /* PSYPlaceDataManager.m */; };
 		21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB051DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m */; };
 		21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB081DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m */; };
+		21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */; };
+		21A2EB0F1DD771A100DCB5BA /* PSYRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */; };
+		21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -84,6 +87,12 @@
 		21A2EB051DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchDismissalTransition.m; sourceTree = "<group>"; };
 		21A2EB071DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSearchPresentationTransistion.h; sourceTree = "<group>"; };
 		21A2EB081DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSearchPresentationTransistion.m; sourceTree = "<group>"; };
+		21A2EB0A1DD770B000DCB5BA /* PSYAppDependencies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYAppDependencies.h; sourceTree = "<group>"; };
+		21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYAppDependencies.m; sourceTree = "<group>"; };
+		21A2EB0D1DD771A100DCB5BA /* PSYRootWireframe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYRootWireframe.h; sourceTree = "<group>"; };
+		21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYRootWireframe.m; sourceTree = "<group>"; };
+		21A2EB111DD7774B00DCB5BA /* PSYDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYDataStore.h; sourceTree = "<group>"; };
+		21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYDataStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +147,8 @@
 				21A2EAD71DD7664700DCB5BA /* Modules */,
 				21A2EAA31DD7631600DCB5BA /* AppDelegate.h */,
 				21A2EAA41DD7631600DCB5BA /* AppDelegate.m */,
+				21A2EB0A1DD770B000DCB5BA /* PSYAppDependencies.h */,
+				21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */,
 				21A2EAA61DD7631600DCB5BA /* ViewController.h */,
 				21A2EAA71DD7631600DCB5BA /* ViewController.m */,
 				21A2EAA91DD7631600DCB5BA /* Main.storyboard */,
@@ -284,6 +295,7 @@
 		21A2EAE21DD7669A00DCB5BA /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				21A2EB101DD772C400DCB5BA /* Store */,
 				21A2EAE31DD7669A00DCB5BA /* Constant */,
 				21A2EAE41DD7669A00DCB5BA /* Extension */,
 				21A2EAE51DD7669A00DCB5BA /* Model */,
@@ -320,8 +332,19 @@
 			children = (
 				21A2EAE71DD7675200DCB5BA /* PSYBaseTableViewController.h */,
 				21A2EAE81DD7675200DCB5BA /* PSYBaseTableViewController.m */,
+				21A2EB0D1DD771A100DCB5BA /* PSYRootWireframe.h */,
+				21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		21A2EB101DD772C400DCB5BA /* Store */ = {
+			isa = PBXGroup;
+			children = (
+				21A2EB111DD7774B00DCB5BA /* PSYDataStore.h */,
+				21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */,
+			);
+			path = Store;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -464,10 +487,13 @@
 				21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */,
 				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
 				21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */,
+				21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */,
 				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
 				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
 				21A2EAA21DD7631600DCB5BA /* main.m in Sources */,
 				21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */,
+				21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */,
+				21A2EB0F1DD771A100DCB5BA /* PSYRootWireframe.m in Sources */,
 				21A2EAEC1DD767E300DCB5BA /* PSYPlace.m in Sources */,
 				21A2EB001DD76CE800DCB5BA /* PSYSearchInteractor.m in Sources */,
 			);
