@@ -10,4 +10,9 @@
 
 @implementation PSYPlaceDataManager
 
+- (void)getPlacesWithArea:(PSYArea *)area category:(PSYCategory *)category sort:(PSYSortAttribute *)sort completionBlock:(void(^)(NSArray * places))completionBlock {
+    
+    // self.dataStore
+}
+
 @end

@@ -28,6 +28,9 @@
 		21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */; };
 		21A2EB0F1DD771A100DCB5BA /* PSYRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */; };
 		21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */; };
+		21A2EB161DD7811E00DCB5BA /* PSYArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB151DD7811E00DCB5BA /* PSYArea.m */; };
+		21A2EB191DD7812B00DCB5BA /* PSYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB181DD7812B00DCB5BA /* PSYCategory.m */; };
+		21A2EB1C1DD7814400DCB5BA /* PSYSortAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,12 @@
 		21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYRootWireframe.m; sourceTree = "<group>"; };
 		21A2EB111DD7774B00DCB5BA /* PSYDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYDataStore.h; sourceTree = "<group>"; };
 		21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYDataStore.m; sourceTree = "<group>"; };
+		21A2EB141DD7811E00DCB5BA /* PSYArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYArea.h; sourceTree = "<group>"; };
+		21A2EB151DD7811E00DCB5BA /* PSYArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYArea.m; sourceTree = "<group>"; };
+		21A2EB171DD7812B00DCB5BA /* PSYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYCategory.h; sourceTree = "<group>"; };
+		21A2EB181DD7812B00DCB5BA /* PSYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYCategory.m; sourceTree = "<group>"; };
+		21A2EB1A1DD7814400DCB5BA /* PSYSortAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSortAttribute.h; sourceTree = "<group>"; };
+		21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSortAttribute.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -323,6 +332,12 @@
 			children = (
 				21A2EAEA1DD767E300DCB5BA /* PSYPlace.h */,
 				21A2EAEB1DD767E300DCB5BA /* PSYPlace.m */,
+				21A2EB141DD7811E00DCB5BA /* PSYArea.h */,
+				21A2EB151DD7811E00DCB5BA /* PSYArea.m */,
+				21A2EB171DD7812B00DCB5BA /* PSYCategory.h */,
+				21A2EB181DD7812B00DCB5BA /* PSYCategory.m */,
+				21A2EB1A1DD7814400DCB5BA /* PSYSortAttribute.h */,
+				21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -480,9 +495,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				21A2EB191DD7812B00DCB5BA /* PSYCategory.m in Sources */,
 				21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */,
 				21A2EAEF1DD769A900DCB5BA /* PSYSearchTableViewController.m in Sources */,
 				21A2EAF21DD769EE00DCB5BA /* PSYSearchResultViewController.m in Sources */,
+				21A2EB1C1DD7814400DCB5BA /* PSYSortAttribute.m in Sources */,
 				21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */,
 				21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */,
 				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
@@ -490,6 +507,7 @@
 				21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */,
 				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
 				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
+				21A2EB161DD7811E00DCB5BA /* PSYArea.m in Sources */,
 				21A2EAA21DD7631600DCB5BA /* main.m in Sources */,
 				21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */,
 				21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */,
