@@ -7,21 +7,20 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import <Realm/Realm.h>
 #import "PSYArea.h"
 #import "PSYCategory.h"
-#import "PSYSortAttribute.h"
+#import "PSYDataStore.h"
 
-@class PSYDataStore;
-
-typedef void(^PSYPlaceDataManagerFetchEntriesBlock)(NSArray *entries);
+typedef void(^PSYPlaceDataManagerFetchEntriesBlock)(RLMResults *entries);
 
 @interface PSYPlaceDataManager : NSObject
 
 @property (nonatomic, strong) PSYDataStore *dataStore;
 
-- (void)getPlacesWithArea:(PSYArea *)area
-                 category:(PSYCategory *)category
-                     sort:(PSYSortAttribute *)sort
-          completionBlock:(void(^)(NSArray * places))completionBlock;
+- (void)getPlacesWithString:(NSString *)searchString
+                   category:(PSYCategory *)category
+               sortProperty:(NSString *)sortProperty
+            completionBlock:(void(^)(RLMResults * places))completionBlock;
 
 @end

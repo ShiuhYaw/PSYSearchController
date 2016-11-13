@@ -7,7 +7,11 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
+#import "PSYPlace.h"
 
-@interface PSYCategory : NSObject
-
+@interface PSYCategory : RLMObject
+@property NSString      *name;
+@property RLMArray<PSYPlace *><PSYPlace> *places;
 @end
+

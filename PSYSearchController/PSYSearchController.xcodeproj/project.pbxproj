@@ -28,9 +28,8 @@
 		21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */; };
 		21A2EB0F1DD771A100DCB5BA /* PSYRootWireframe.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */; };
 		21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */; };
-		21A2EB161DD7811E00DCB5BA /* PSYArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB151DD7811E00DCB5BA /* PSYArea.m */; };
 		21A2EB191DD7812B00DCB5BA /* PSYCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB181DD7812B00DCB5BA /* PSYCategory.m */; };
-		21A2EB1C1DD7814400DCB5BA /* PSYSortAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */; };
+		BD2F8261B0C5744AE576575F /* libPods-PSYSearchController.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3708BAF716C8E6BCF8409884 /* libPods-PSYSearchController.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,12 +95,11 @@
 		21A2EB0E1DD771A100DCB5BA /* PSYRootWireframe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYRootWireframe.m; sourceTree = "<group>"; };
 		21A2EB111DD7774B00DCB5BA /* PSYDataStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYDataStore.h; sourceTree = "<group>"; };
 		21A2EB121DD7774B00DCB5BA /* PSYDataStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYDataStore.m; sourceTree = "<group>"; };
-		21A2EB141DD7811E00DCB5BA /* PSYArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYArea.h; sourceTree = "<group>"; };
-		21A2EB151DD7811E00DCB5BA /* PSYArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYArea.m; sourceTree = "<group>"; };
 		21A2EB171DD7812B00DCB5BA /* PSYCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYCategory.h; sourceTree = "<group>"; };
 		21A2EB181DD7812B00DCB5BA /* PSYCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYCategory.m; sourceTree = "<group>"; };
-		21A2EB1A1DD7814400DCB5BA /* PSYSortAttribute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSortAttribute.h; sourceTree = "<group>"; };
-		21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSortAttribute.m; sourceTree = "<group>"; };
+		3708BAF716C8E6BCF8409884 /* libPods-PSYSearchController.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PSYSearchController.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5854C5BDE7D8A0470F3394DE /* Pods-PSYSearchController.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSYSearchController.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PSYSearchController/Pods-PSYSearchController.debug.xcconfig"; sourceTree = "<group>"; };
+		BA407D6C7248A4BE4F25054F /* Pods-PSYSearchController.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PSYSearchController.release.xcconfig"; path = "Pods/Target Support Files/Pods-PSYSearchController/Pods-PSYSearchController.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +107,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD2F8261B0C5744AE576575F /* libPods-PSYSearchController.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +135,8 @@
 				21A2EAB91DD7631600DCB5BA /* PSYSearchControllerTests */,
 				21A2EAC41DD7631600DCB5BA /* PSYSearchControllerUITests */,
 				21A2EA9E1DD7631600DCB5BA /* Products */,
+				8DFA41720F360683A11570B7 /* Pods */,
+				CD3FD31B673E928C9163823B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -332,12 +333,8 @@
 			children = (
 				21A2EAEA1DD767E300DCB5BA /* PSYPlace.h */,
 				21A2EAEB1DD767E300DCB5BA /* PSYPlace.m */,
-				21A2EB141DD7811E00DCB5BA /* PSYArea.h */,
-				21A2EB151DD7811E00DCB5BA /* PSYArea.m */,
 				21A2EB171DD7812B00DCB5BA /* PSYCategory.h */,
 				21A2EB181DD7812B00DCB5BA /* PSYCategory.m */,
-				21A2EB1A1DD7814400DCB5BA /* PSYSortAttribute.h */,
-				21A2EB1B1DD7814400DCB5BA /* PSYSortAttribute.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -362,6 +359,23 @@
 			path = Store;
 			sourceTree = "<group>";
 		};
+		8DFA41720F360683A11570B7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5854C5BDE7D8A0470F3394DE /* Pods-PSYSearchController.debug.xcconfig */,
+				BA407D6C7248A4BE4F25054F /* Pods-PSYSearchController.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		CD3FD31B673E928C9163823B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3708BAF716C8E6BCF8409884 /* libPods-PSYSearchController.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -369,9 +383,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 21A2EACA1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchController" */;
 			buildPhases = (
+				20E3CBD995C803FA861B44F5 /* [CP] Check Pods Manifest.lock */,
 				21A2EA991DD7631600DCB5BA /* Sources */,
 				21A2EA9A1DD7631600DCB5BA /* Frameworks */,
 				21A2EA9B1DD7631600DCB5BA /* Resources */,
+				A6E050B30A1C1392BD726AC9 /* [CP] Embed Pods Frameworks */,
+				A062A7C77AE11185FBE43E63 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -490,6 +507,54 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		20E3CBD995C803FA861B44F5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A062A7C77AE11185FBE43E63 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PSYSearchController/Pods-PSYSearchController-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A6E050B30A1C1392BD726AC9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PSYSearchController/Pods-PSYSearchController-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		21A2EA991DD7631600DCB5BA /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -499,7 +564,6 @@
 				21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */,
 				21A2EAEF1DD769A900DCB5BA /* PSYSearchTableViewController.m in Sources */,
 				21A2EAF21DD769EE00DCB5BA /* PSYSearchResultViewController.m in Sources */,
-				21A2EB1C1DD7814400DCB5BA /* PSYSortAttribute.m in Sources */,
 				21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */,
 				21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */,
 				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
@@ -507,7 +571,6 @@
 				21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */,
 				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
 				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
-				21A2EB161DD7811E00DCB5BA /* PSYArea.m in Sources */,
 				21A2EAA21DD7631600DCB5BA /* main.m in Sources */,
 				21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */,
 				21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */,
@@ -660,6 +723,7 @@
 		};
 		21A2EACB1DD7631600DCB5BA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5854C5BDE7D8A0470F3394DE /* Pods-PSYSearchController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSYSearchController/Info.plist;
@@ -671,6 +735,7 @@
 		};
 		21A2EACC1DD7631600DCB5BA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BA407D6C7248A4BE4F25054F /* Pods-PSYSearchController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PSYSearchController/Info.plist;
@@ -745,6 +810,7 @@
 				21A2EACC1DD7631600DCB5BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21A2EACD1DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerTests" */ = {
 			isa = XCConfigurationList;
@@ -753,6 +819,7 @@
 				21A2EACF1DD7631600DCB5BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		21A2EAD01DD7631600DCB5BA /* Build configuration list for PBXNativeTarget "PSYSearchControllerUITests" */ = {
 			isa = XCConfigurationList;
@@ -761,6 +828,7 @@
 				21A2EAD21DD7631600DCB5BA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

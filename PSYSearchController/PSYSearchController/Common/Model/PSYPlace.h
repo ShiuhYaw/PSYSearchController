@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
+@class PSYCategory;
+@class PSYArea;
 
-@interface PSYPlace : NSObject
-
+@interface PSYPlace : RLMObject
+@property NSString      *name;
+@property NSData        *picture;
+@property NSNumber      *rate;
+@property NSDate        *updatedDate;
+@property PSYCategory   *category;
+@property PSYArea       *area;
 @end
+RLM_ARRAY_TYPE(PSYPlace)

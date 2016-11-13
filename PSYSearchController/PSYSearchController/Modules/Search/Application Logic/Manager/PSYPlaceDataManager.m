@@ -10,9 +10,18 @@
 
 @implementation PSYPlaceDataManager
 
-- (void)getPlacesWithArea:(PSYArea *)area category:(PSYCategory *)category sort:(PSYSortAttribute *)sort completionBlock:(void(^)(NSArray * places))completionBlock {
-    
-    // self.dataStore
+- (void)getPlacesWithString:(NSString *)searchString
+                   category:(PSYCategory *)category
+               sortProperty:(NSString *)sortProperty
+            completionBlock:(void(^)(RLMResults * places))completionBlock{
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category.name = %@) AND name = %@", category.name, searchString];
+    NSString *sort = sortProperty;
+    [self.dataStore fetchEntriesWithPredicate:predicate
+                                 sortProperty:sort
+                              completionBlock:^(RLMResults *results) {
+                                  if (completionBlock) {
+                                      completionBlock(results);
+                                  }
+                              }];
 }
-
 @end
