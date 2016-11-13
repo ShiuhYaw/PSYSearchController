@@ -1,0 +1,5 @@
+platform :ios, '9.0'
+
+target 'PSYSearchController' do
+  pod 'Realm', '~> 1.1.0'
+end
