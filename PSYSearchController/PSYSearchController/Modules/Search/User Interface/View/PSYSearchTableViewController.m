@@ -24,15 +24,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.strongTableView = self.tableView;
+    [self configureView];
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     [self.searchController.searchBar sizeToFit];
-    self.tableView.tableHeaderView = self.searchController.searchBar;
-    self.tableView.delegate = self;
+    self.strongTableView.tableHeaderView = self.searchController.searchBar;
+    self.strongTableView.delegate = self;
     self.searchController.delegate = self;
     self.searchController.dimsBackgroundDuringPresentation = NO;
     self.searchController.searchBar.delegate = self;
-    self.definesPresentationContext = YES;
+//    self.definesPresentationContext = YES;
 
     // Do any additional setup after loading the view.
 }
@@ -61,6 +63,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)configureView {
+    
+    self.navigationItem.title = @"Places";
 }
 
 /*
@@ -121,6 +128,7 @@
 
 - (void)willPresentSearchController:(UISearchController *)searchController {
     // do something before the search controller is presented
+    self.navigationController.navigationBar.translucent = YES;
 }
 
 - (void)didPresentSearchController:(UISearchController *)searchController {
@@ -129,6 +137,7 @@
 
 - (void)willDismissSearchController:(UISearchController *)searchController {
     // do something before the search controller is dismissed
+    self.navigationController.navigationBar.translucent = NO;
 }
 
 - (void)didDismissSearchController:(UISearchController *)searchController {
@@ -243,19 +252,20 @@ NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
 
 #pragma mark - PSYSearchViewInterface
 - (void)showNoContentMessage {
-    
-//    self.view = self.noContentView;
+
+    self.view = self.noContentView;
 }
 
 - (void)showPlacesData:(RLMResults *)results {
     
+    self.view = self.strongTableView;
     self.places = results;
     [self reloadPlaces];
 }
 
 - (void)reloadPlaces {
 
-    [self.tableView reloadData];
+    [self.strongTableView reloadData];
 }
 
 @end
