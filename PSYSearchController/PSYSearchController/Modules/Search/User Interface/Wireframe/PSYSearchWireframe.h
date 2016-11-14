@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
 
+@class PSYRootWireframe;
 @class PSYSearchPresenter;
 @class PSYSearchTableViewController;
-@class PSYRootWireframe;
 
 @interface PSYSearchWireframe : NSObject
 

@@ -7,7 +7,41 @@
 //
 
 #import "PSYSearchPresenter.h"
+#import "PSYSearchInteractor.h"
+#import "PSYSearchViewInterface.h"
+#import "PSYSearchWireframe.h"
 
 @implementation PSYSearchPresenter
+
+#pragma mark PSYSearchModuleInterface
+
+- (void)updateView {
+    
+    [self.searchInteractor findPlaces];
+}
+
+- (void)updateViewWithPredicate:(NSPredicate *)predicate category:(PSYCategory *)givenCategory sortProperty:(NSString *)sortProperty {
+    
+    [self.searchInteractor findPlaceWithPredicate:predicate
+                                         category:givenCategory
+                                     sortProperty:sortProperty];
+}
+
+- (void)addPlace {
+    
+}
+
+#pragma mark PSYSearchInteractorOutput
+
+- (void)foundPlaces:(RLMResults *)places {
+    
+    if (places.count > 0) {
+        [self.userInterface showPlacesData:places];
+        return;
+    }
+    [self.userInterface showNoContentMessage];
+    return;
+}
+
 
 @end

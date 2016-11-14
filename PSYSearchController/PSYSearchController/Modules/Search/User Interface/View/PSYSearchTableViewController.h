@@ -7,7 +7,12 @@
 //
 
 #import "PSYBaseTableViewController.h"
+#import "PSYSearchViewInterface.h"
+#import "PSYSearchModuleInterface.h"
 
-@interface PSYSearchTableViewController : PSYBaseTableViewController
+@interface PSYSearchTableViewController : PSYBaseTableViewController <PSYSearchViewInterface>
+
+@property (nonatomic, strong) IBOutlet UIView *noContentView;
+@property (nonatomic, strong) id<PSYSearchModuleInterface> eventHandler;
 
 @end

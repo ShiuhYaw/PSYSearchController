@@ -7,13 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PSYCategory.h"
 
 @protocol PSYSearchInteractorInput <NSObject>
-
-
+- (void)findPlaces;
+- (void)findPlaceWithPredicate:(NSPredicate *)predicate
+                      category:(PSYCategory *)givenCategory
+                  sortProperty:(NSString *)givenSortProperty;
 @end
 
 @protocol PSYSearchInteractorOutput <NSObject>
 
+- (void)foundPlaces:(RLMResults *)places;
 
 @end

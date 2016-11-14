@@ -7,8 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@class PSYCategory;
 
 @protocol PSYSearchModuleInterface <NSObject>
 
+- (void)updateView;
+- (void)updateViewWithPredicate:(NSPredicate *)predicate category:(PSYCategory *)givenCategory sortProperty:(NSString *)sortProperty;
+- (void)addPlace;
 
 @end

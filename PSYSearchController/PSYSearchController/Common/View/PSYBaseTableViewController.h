@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PSYPlace;
+
+extern NSString *const kCellIdentifier;
+
+
 @interface PSYBaseTableViewController : UITableViewController
+
+- (void)configureCell:(UITableViewCell *)cell forPlace:(PSYPlace *)place;
 
 @end

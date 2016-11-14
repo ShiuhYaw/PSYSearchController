@@ -7,21 +7,55 @@
 //
 
 #import "PSYPlaceDataManager.h"
+#import "PSYCategory.h"
+#import "PSYDataStore.h"
 
 @implementation PSYPlaceDataManager
+
+- (void)getDefaultCategoryCompletionBlock:(void(^)(PSYCategory * category))completionBlock {
+    
+    [self.dataStore fetchDefaultCategoryCompletionBlock:^(PSYCategory *results) {
+        if (completionBlock) {
+            completionBlock(results);
+        }
+    }];
+}
 
 - (void)getPlacesWithString:(NSString *)searchString
                    category:(PSYCategory *)category
                sortProperty:(NSString *)sortProperty
             completionBlock:(void(^)(RLMResults * places))completionBlock{
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(category.name = %@) AND name = %@", category.name, searchString];
-    NSString *sort = sortProperty;
+
+    NSPredicate *predicate = nil;
+    if (searchString.length > 0) {
+        predicate = [NSPredicate predicateWithFormat:@"(category.name = %@) AND name = %@", category.name, searchString];
+    }
+    else {
+        predicate = [NSPredicate predicateWithFormat:@"(category.name = %@)", category.name];
+    }
     [self.dataStore fetchEntriesWithPredicate:predicate
-                                 sortProperty:sort
+                                 sortProperty:sortProperty
                               completionBlock:^(RLMResults *results) {
                                   if (completionBlock) {
                                       completionBlock(results);
                                   }
                               }];
 }
+
+
+- (void)getPlacesWithPredicate:(NSPredicate *)predicate
+                   category:(PSYCategory *)category
+               sortProperty:(NSString *)sortProperty
+            completionBlock:(void(^)(RLMResults * places))completionBlock {
+    
+    [self.dataStore fetchEntriesWithPredicate:predicate
+                                 sortProperty:sortProperty
+                              completionBlock:^(RLMResults *results) {
+                                  if (completionBlock) {
+                                      completionBlock(results);
+                                  }
+                              }];
+}
+
+
 @end

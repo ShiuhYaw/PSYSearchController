@@ -10,5 +10,8 @@
 
 @protocol PSYSearchViewInterface <NSObject>
 
+- (void)showNoContentMessage;
+- (void)showPlacesData:(RLMResults *)results;
+- (void)reloadPlaces;
 
 @end

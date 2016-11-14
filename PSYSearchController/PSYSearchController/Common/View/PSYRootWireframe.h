@@ -7,7 +7,13 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PSYSearchModuleInterface.h"
+
+@class PSYSearchTableViewController;
 
 @interface PSYRootWireframe : NSObject
+
+- (void)showRootViewController:(UIViewController *)viewController
+                      inWindow:(UIWindow *)window;
 
 @end

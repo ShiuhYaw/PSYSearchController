@@ -7,9 +7,10 @@
 //
 
 #import "AppDelegate.h"
+#import "PSYAppDependencies.h"
 
 @interface AppDelegate ()
-
+@property (nonatomic, strong) PSYAppDependencies* appDependencies;
 @end
 
 @implementation AppDelegate
@@ -17,6 +18,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    PSYAppDependencies *dependencies = [[PSYAppDependencies alloc] init];
+    self.appDependencies = dependencies;
+    [self.appDependencies installRootViewControllerInWindow:self.window];
     return YES;
 }
 

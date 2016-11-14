@@ -9,11 +9,14 @@
 #import <Foundation/Foundation.h>
 #import "PSYSearchModuleInterface.h"
 #import "PSYSearchInteractorIO.h"
-#import "PSYSearchWireframe.h"
+
+@protocol PSYSearchViewInterface;
+@class PSYSearchWireframe;
 
 @interface PSYSearchPresenter : NSObject <PSYSearchInteractorOutput, PSYSearchModuleInterface>
 
 @property (nonatomic, strong) id<PSYSearchInteractorInput> searchInteractor;
 @property (nonatomic, strong) PSYSearchWireframe *searchWireframe;
+@property (nonatomic, strong) UIViewController<PSYSearchViewInterface> *userInterface;
 
 @end

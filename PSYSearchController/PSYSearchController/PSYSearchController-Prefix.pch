@@ -1,0 +1,20 @@
+//
+//  PSYSearchController-Prefix.pch
+//  PSYSearchController
+//
+//  Created by Shiuh Yaw Phang on 14/11/2016.
+//  Copyright © 2016 Shiuh Yaw Phang. All rights reserved.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_5_0
+#warning "This project uses features only available in iOS SDK 5.0 and later."
+#endif
+
+#ifdef __OBJC__
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <Realm/Realm.h>
+#endif
+

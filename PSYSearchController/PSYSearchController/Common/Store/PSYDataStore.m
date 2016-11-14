@@ -26,6 +26,17 @@
     return self;
 }
 
+- (void)fetchDefaultCategoryCompletionBlock:(PSYCategoryFetchCompletionBlock)completionBlock {
+    
+    if (completionBlock) {
+        PSYCategory *defaultCategory = [PSYCategory objectForPrimaryKey:@(1)];
+        completionBlock(defaultCategory);
+        return;
+    }
+    completionBlock(nil);
+    return;
+}
+
 - (void)fetchEntriesWithPredicate:(NSPredicate *)predicate
                      sortProperty:(NSString *)property
                   completionBlock:(PSYDataStoreFetchCompletionBlock)completionBlock {

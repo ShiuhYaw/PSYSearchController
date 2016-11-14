@@ -10,4 +10,8 @@
 
 @implementation PSYCategory
 
++ (NSString *)primaryKey {
+    return @"id";
+}
+
 @end

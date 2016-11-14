@@ -7,11 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <Realm/Realm.h>
+#import "PSYCategory.h"
 
 typedef void(^PSYDataStoreFetchCompletionBlock)(RLMResults *results);
+typedef void(^PSYCategoryFetchCompletionBlock)(PSYCategory *results);
 
 @interface PSYDataStore : NSObject
+
+- (void)fetchDefaultCategoryCompletionBlock:(PSYCategoryFetchCompletionBlock)completionBlock;
 
 - (void)fetchEntriesWithPredicate:(NSPredicate *)predicate
                      sortProperty:(NSString *)property
