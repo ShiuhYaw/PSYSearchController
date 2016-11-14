@@ -10,4 +10,8 @@
 
 @implementation PSYPlace
 
++ (NSString *)primaryKey {
+    return @"placeId";
+}
+
 @end

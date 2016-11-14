@@ -11,7 +11,7 @@
 @implementation PSYCategory
 
 + (NSString *)primaryKey {
-    return @"id";
+    return @"categoryId";
 }
 
 @end

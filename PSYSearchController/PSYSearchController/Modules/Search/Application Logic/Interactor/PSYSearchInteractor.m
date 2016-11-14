@@ -14,7 +14,9 @@
 
 @property (nonatomic, strong) PSYPlaceDataManager *dataManager;
 @property (nonatomic, strong) PSYCategory *defaultCategory;
-
+@property (nonatomic, strong) NSString *sortProperty ;
+@property (nonatomic, strong) RLMResults *places ;
+@property (nonatomic, strong) NSPredicate *currentPreducate;
 @end
 
 @implementation PSYSearchInteractor
@@ -24,8 +26,8 @@
     self = [super init];
     if (self) {
         _dataManager = dataManager;
-        _defaultCategory = [[PSYCategory alloc] init];
-        _defaultCategory.name = @"";
+        _sortProperty = @"name";
+        _defaultCategory = [PSYCategory objectForPrimaryKey:@(1)];
     }
     return self;
 }
@@ -35,39 +37,39 @@
 - (void)findPlaces {
     
     __weak typeof(self) welf = self;
-    [self.dataManager getDefaultCategoryCompletionBlock:^(PSYCategory *category) {
-        welf.defaultCategory = category;
-    }];
     [self.dataManager getPlacesWithString:@""
                                  category:self.defaultCategory
                              sortProperty:@"name"
                           completionBlock:^(RLMResults * places){
+                              welf.places = places;
                               [welf.output foundPlaces:places];
                           }];
 }
 
 - (void)findPlaceWithPredicate:(NSPredicate *)predicate category:(PSYCategory *)givenCategory sortProperty:(NSString *)givenSortProperty {
     
-    NSString *sortProperty = @"name";
+    NSString *sortProperty = self.sortProperty;
     if (givenSortProperty != nil && givenSortProperty.length > 0) {
         sortProperty = givenSortProperty;
     }
     if (givenCategory == nil) {
         givenCategory = self.defaultCategory;
     }
+    self.currentPreducate = predicate;
     __weak typeof(self) welf = self;
     [self.dataManager getPlacesWithPredicate:predicate
                                     category:givenCategory
                                 sortProperty:sortProperty
                              completionBlock:^(RLMResults *places) {
-        [welf.output foundPlaces:places];
+                                 welf.places = places;
+                                 [welf.output foundPlaces:places];
     }];
 }
 
 - (void)findPlaceWithSearchString:(NSString *)string category:(PSYCategory *)givenCategory sortProperty:(NSString *)givenSortProperty {
     
     NSString *searchString = @"";
-    NSString *sortProperty = @"name";
+    NSString *sortProperty = self.sortProperty;
     if (string != nil && string.length > 0) {
         searchString = string;
     }
@@ -82,8 +84,31 @@
                                  category:givenCategory
                              sortProperty:sortProperty
                           completionBlock:^(RLMResults * places){
+                              welf.places = places;
                               [welf.output foundPlaces:places];
                           }];
+}
+
+- (void)findPlaceWithSortProperty:(NSString *)givenSortProperty {
+    
+    if (self.places.count > 0) {
+        self.sortProperty = givenSortProperty;
+        [self.places sortedResultsUsingProperty:givenSortProperty ascending:true];
+    }
+}
+
+- (void)findPlaceWithCategory:(PSYCategory *)givenCategory {
+    
+        self.defaultCategory = givenCategory;
+        __weak typeof(self) welf = self;
+        [self.dataManager getPlacesWithPredicate:self.currentPreducate
+                                        category:givenCategory
+                                    sortProperty:self.sortProperty
+                                 completionBlock:^(RLMResults *places) {
+                                     welf.places = places;
+                                     [welf.output foundPlaces:places];
+                                 }];
+
 }
 
 @end

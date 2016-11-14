@@ -14,6 +14,9 @@
 - (void)findPlaceWithPredicate:(NSPredicate *)predicate
                       category:(PSYCategory *)givenCategory
                   sortProperty:(NSString *)givenSortProperty;
+- (void)findPlaceWithSortProperty:(NSString *)givenSortProperty;
+- (void)findPlaceWithCategory:(PSYCategory *)givenCategory;
+
 @end
 
 @protocol PSYSearchInteractorOutput <NSObject>

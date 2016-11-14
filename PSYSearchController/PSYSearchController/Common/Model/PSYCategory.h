@@ -10,7 +10,7 @@
 #import "PSYPlace.h"
 
 @interface PSYCategory : RLMObject
-@property NSInteger id;
+@property NSInteger categoryId;
 @property NSString      *name;
 @property RLMArray<PSYPlace *><PSYPlace> *places;
 @end

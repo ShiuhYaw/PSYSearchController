@@ -18,7 +18,6 @@
 
 @property (nonatomic, strong) RLMResults    *places;
 @property (nonatomic, strong) UITableView   *strongTableView;
-
 @end
 
 @implementation PSYSearchTableViewController
@@ -167,17 +166,6 @@
         numberFormatter.numberStyle = NSNumberFormatterNoStyle;
         NSNumber *targetNumber = [numberFormatter numberFromString:searchString];
         if (targetNumber != nil) {
-            // searchString may not convert to a number
-            lhs = [NSExpression expressionForKeyPath:@"updatedDate"];
-            rhs = [NSExpression expressionForConstantValue:targetNumber];
-            finalPredicate = [NSComparisonPredicate
-                              predicateWithLeftExpression:lhs
-                              rightExpression:rhs
-                              modifier:NSDirectPredicateModifier
-                              type:NSEqualToPredicateOperatorType
-                              options:NSCaseInsensitivePredicateOption];
-            [searchItemsPredicate addObject:finalPredicate];
-            
             // rate field matching
             lhs = [NSExpression expressionForKeyPath:@"rate"];
             rhs = [NSExpression expressionForConstantValue:targetNumber];

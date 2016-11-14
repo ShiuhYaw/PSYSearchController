@@ -47,8 +47,11 @@
     }
 }
 
-- (void)save {
-    
+- (void)save:(RLMObject *)object {
+
+    [self.realm beginWriteTransaction];
+    [self.realm addOrUpdateObject:object];
+    [self.realm commitWriteTransaction];
 }
 
 @end

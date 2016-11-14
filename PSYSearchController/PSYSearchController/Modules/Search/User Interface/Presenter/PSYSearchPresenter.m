@@ -27,6 +27,11 @@
                                      sortProperty:sortProperty];
 }
 
+- (void)updateViewWithSortProperty:(NSString *)sortProperty {
+    
+    [self.searchInteractor findPlaceWithSortProperty:sortProperty];
+}
+
 - (void)addPlace {
     
 }

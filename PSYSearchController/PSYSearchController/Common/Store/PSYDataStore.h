@@ -19,5 +19,5 @@ typedef void(^PSYCategoryFetchCompletionBlock)(PSYCategory *results);
 - (void)fetchEntriesWithPredicate:(NSPredicate *)predicate
                      sortProperty:(NSString *)property
                   completionBlock:(PSYDataStoreFetchCompletionBlock)completionBlock;
-- (void)save;
+- (void)save:(RLMObject *)object;
 @end
