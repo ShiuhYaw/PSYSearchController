@@ -14,5 +14,6 @@
 
 @property (nonatomic, strong) IBOutlet UIView *noContentView;
 @property (nonatomic, strong) id<PSYSearchModuleInterface> eventHandler;
+@property (strong, nonatomic) IBOutlet UIView *sortFilterView;
 
 @end

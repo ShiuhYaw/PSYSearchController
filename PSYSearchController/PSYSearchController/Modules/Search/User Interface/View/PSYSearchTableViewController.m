@@ -22,20 +22,20 @@
 
 @implementation PSYSearchTableViewController
 
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.strongTableView = self.tableView;
-    [self configureView];
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
-    [self.searchController.searchBar sizeToFit];
-    self.strongTableView.tableHeaderView = self.searchController.searchBar;
     self.strongTableView.delegate = self;
     self.searchController.delegate = self;
-    self.searchController.dimsBackgroundDuringPresentation = NO;
+    self.searchController.hidesNavigationBarDuringPresentation = false;
+    self.searchController.dimsBackgroundDuringPresentation = false;
     self.searchController.searchBar.delegate = self;
-//    self.definesPresentationContext = YES;
-
+    self.navigationItem.titleView = self.searchController.searchBar;
+    self.definesPresentationContext = true;
+    self.tableView.tableHeaderView = self.sortFilterView;
     // Do any additional setup after loading the view.
 }
 
@@ -63,11 +63,6 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
-}
-
-- (void)configureView {
-    
-    self.navigationItem.title = @"Places";
 }
 
 /*
@@ -155,6 +150,10 @@
     NSArray *searchItems = nil;
     if (strippedString.length > 0) {
         searchItems = [strippedString componentsSeparatedByString:@" "];
+    }
+    else {
+        [self.eventHandler updateView];
+        return;
     }
     NSMutableArray *andMatchPredicates = [NSMutableArray array];
     for (NSString *searchString in searchItems) {

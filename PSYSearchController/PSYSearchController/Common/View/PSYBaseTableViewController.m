@@ -8,6 +8,7 @@
 
 #import "PSYBaseTableViewController.h"
 #import "PSYPlace.h"
+#import "PSYCategory.h"
 #import "PSYPlaceTableViewCell.h"
 
 NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
@@ -37,7 +38,11 @@ NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
 - (void)configureCell:(UITableViewCell *)cell forPlace:(PSYPlace *)place {
     
     PSYPlaceTableViewCell *currentCell = (PSYPlaceTableViewCell *)cell;
-    currentCell.rateLabel.text = @"rate label";
+    currentCell.rateLabel.text = [place.rate stringValue];
+    currentCell.titleLabel.text = place.name;
+    currentCell.categoryLabel.text = place.category.name;
+    currentCell.distanceLabel.text = [place.distance stringValue];
+    currentCell.areaLabel.text = @"";
 }
 
 @end
