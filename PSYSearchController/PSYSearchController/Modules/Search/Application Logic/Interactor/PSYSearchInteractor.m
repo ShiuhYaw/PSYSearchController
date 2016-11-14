@@ -42,15 +42,17 @@
                              sortProperty:@"name"
                           completionBlock:^(RLMResults * places){
                               welf.places = places;
-                              [welf.output foundPlaces:places];
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  [welf.output foundPlaces:places];
+                              });
                           }];
 }
 
 - (void)findPlaceWithPredicate:(NSPredicate *)predicate category:(PSYCategory *)givenCategory sortProperty:(NSString *)givenSortProperty {
     
     NSString *sortProperty = self.sortProperty;
-    if (givenSortProperty != nil && givenSortProperty.length > 0) {
-        sortProperty = givenSortProperty;
+    if (givenSortProperty != nil) {
+        sortProperty =  givenSortProperty;
     }
     if (givenCategory == nil) {
         givenCategory = self.defaultCategory;
@@ -62,7 +64,10 @@
                                 sortProperty:sortProperty
                              completionBlock:^(RLMResults *places) {
                                  welf.places = places;
-                                 [welf.output foundPlaces:places];
+                                 dispatch_async(dispatch_get_main_queue(), ^{
+                                     [welf.output foundPlaces:places];
+                                 });
+
     }];
 }
 
@@ -85,7 +90,9 @@
                              sortProperty:sortProperty
                           completionBlock:^(RLMResults * places){
                               welf.places = places;
-                              [welf.output foundPlaces:places];
+                              dispatch_async(dispatch_get_main_queue(), ^{
+                                  [welf.output foundPlaces:places];
+                              });
                           }];
 }
 
@@ -106,7 +113,9 @@
                                     sortProperty:self.sortProperty
                                  completionBlock:^(RLMResults *places) {
                                      welf.places = places;
-                                     [welf.output foundPlaces:places];
+                                     dispatch_async(dispatch_get_main_queue(), ^{
+                                         [welf.output foundPlaces:places];
+                                     });
                                  }];
 
 }

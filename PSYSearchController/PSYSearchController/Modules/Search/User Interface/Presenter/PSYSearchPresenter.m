@@ -42,10 +42,10 @@
     
     if (places.count > 0) {
         [self.userInterface showPlacesData:places];
-        return;
+    } else {
+        [self.userInterface showNoContentMessage];
+
     }
-    [self.userInterface showNoContentMessage];
-    return;
 }
 
 

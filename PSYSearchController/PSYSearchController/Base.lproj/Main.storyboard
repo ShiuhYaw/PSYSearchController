@@ -24,9 +24,6 @@
         <!--Search Table View Controller-->
         <scene sceneID="gHG-Bi-ZY1">
             <objects>
-                <viewController storyboardIdentifier="PSYSearchTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qRM-B9-pJU" customClass="PSYSearchTableViewController" sceneMemberID="viewController">
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
-                </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QI9-qY-18R" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <view contentMode="scaleToFill" id="Avm-Ll-STW">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
@@ -37,18 +34,17 @@
                     <rect key="frame" x="0.0" y="0.0" width="375" height="665"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <prototypes>
-                        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PSYPlaceCellIdentifier" rowHeight="226" id="J89-3S-Qe6" customClass="PSYPlaceCell">
-                            <rect key="frame" x="0.0" y="28" width="375" height="226"/>
-                            <autoresizingMask key="autoresizingMask"/>
-                            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="J89-3S-Qe6" id="N4D-YJ-UlO">
-                                <frame key="frameInset" width="375" height="225"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                            </tableViewCellContentView>
-                            <color key="backgroundColor" red="0.87843137979999997" green="0.89803922179999995" blue="0.92549020049999997" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                        </tableViewCell>
-                    </prototypes>
+                    <connections>
+                        <outlet property="dataSource" destination="qRM-B9-pJU" id="rTo-sO-cIG"/>
+                        <outlet property="delegate" destination="qRM-B9-pJU" id="c3E-5a-qDv"/>
+                    </connections>
                 </tableView>
+                <viewController storyboardIdentifier="PSYSearchTableViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="qRM-B9-pJU" customClass="PSYSearchTableViewController" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <connections>
+                        <outlet property="noContentView" destination="Avm-Ll-STW" id="eeb-dD-7f8"/>
+                    </connections>
+                </viewController>
             </objects>
             <point key="canvasLocation" x="919" y="-544"/>
         </scene>

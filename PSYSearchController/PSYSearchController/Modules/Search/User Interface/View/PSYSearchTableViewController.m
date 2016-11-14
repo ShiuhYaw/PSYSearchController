@@ -24,7 +24,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.strongTableView = self.tableView;
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     [self.searchController.searchBar sizeToFit];
@@ -83,7 +82,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     
-    NSInteger rows = 10;
+    NSInteger rows = 0;
     if (self.places.count > 0) {
         rows = self.places.count;
     }
@@ -138,6 +137,7 @@
 
 #pragma mark - UISearchResultsUpdating
 - (void)updateSearchResultsForSearchController:(UISearchController *)searchController {
+    
     
     NSString *searchText = searchController.searchBar.text;
     NSString *strippedString = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
@@ -244,12 +244,11 @@ NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
 #pragma mark - PSYSearchViewInterface
 - (void)showNoContentMessage {
     
-    self.view = self.noContentView;
+//    self.view = self.noContentView;
 }
 
 - (void)showPlacesData:(RLMResults *)results {
     
-    self.view = self.strongTableView;
     self.places = results;
     [self reloadPlaces];
 }
