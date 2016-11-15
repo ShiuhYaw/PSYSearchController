@@ -12,7 +12,7 @@
 @interface PSYPlace : RLMObject
 @property NSInteger      placeId;
 @property NSString      *name;
-@property NSData        *picture;
+@property NSString      *picture;
 @property NSNumber<RLMInt> *rate;
 @property NSDate        *updatedDate;
 @property NSNumber<RLMFloat> *longitude;

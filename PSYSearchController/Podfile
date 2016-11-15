@@ -2,4 +2,6 @@ platform :ios, '9.0'
 
 target 'PSYSearchController' do
   pod 'Realm', '~> 1.1.0'
+  pod 'AFNetworking', '~> 3.1.0'
+  pod 'HCSStarRatingView', '~> 1.4.5'
 end

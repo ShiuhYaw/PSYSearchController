@@ -107,7 +107,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Sentosa %d", i];
-        place.picture = nil;
+        place.picture = @"http://gcbens.org/Upload/EditorFiles/201511/20151118192033543.png";
         place.rate = @(1);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -120,7 +120,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Merlion %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.travoline.com/wp-content/uploads/2013/12/singapore-about.png";
         place.rate = @(2);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -133,7 +133,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Coastes %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.newagepregnancy.com/wp-content/uploads/2015/02/Coastes-1024x486.png";
         place.rate = @(3);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -146,7 +146,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Singapore Philatelic Musuem %d", i];
-        place.picture = nil;
+        place.picture = @"http://nightfest.sg/~/media/snf/images/festival%20specials/spm-final.png?as=1&mw=834";
         place.rate = @(4);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -159,7 +159,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Fort Canning %d", i];
-        place.picture = nil;
+        place.picture = @"http://roots.sg/~/media/Roots/Images/landmarks/jubilee-walk/002-fort-canning-park/002-fort-canning-park.png";
         place.rate = @(5);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -185,7 +185,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"St. Andrew's Cathedral %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.ntu.edu.sg/ias/upcomingevents/PublishingImages/InformationForParticipants/National%20Museum.jpg";
         place.rate = @(2);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -198,7 +198,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Armenian Church of Saint Gregory the Illuminator %d", i];
-        place.picture = nil;
+        place.picture = @"http://roots.sg/~/media/Roots/Images/monuments/069-armenian-apostolic-church-of-saint-gregory-the-illuminator/armenian-church-01.png";
         place.rate = @(3);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -211,7 +211,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Peranakan Museum %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.yoursingapore.com/see-do-singapore/culture-heritage/heritage-discovery/peranakan-museum/_jcr_content.renderimage.carousel.rect.740.416.jpg";
         place.rate = @(4);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -224,7 +224,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Singapore of Art Musuem %d", i];
-        place.picture = nil;
+        place.picture = @"http://singart.com/wp-content/uploads/2014/08/3.jpg";
         place.rate = @(5);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -237,7 +237,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Kwan lm Thong Hood Cho Temple %d", i];
-        place.picture = nil;
+        place.picture = @"http://static.asiawebdirect.com/m/phuket/portals/www-singapore-com/homepage/attractions/bugis-and-kampong-glam/allParagraphs/03/image/kwan-im-thong-hood-temple.jpg";
         place.rate = @(4);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -250,7 +250,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Masjid Sultan %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.yoursingapore.com/see-do-singapore/culture-heritage/places-of-worship/sultan-mosque/_jcr_content/par-carousel/carousel_detailpage/carousel/item_1.thumbnail.carousel-img.740.416.jpg";
         place.rate = @(4);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);
@@ -263,7 +263,7 @@
         PSYPlace *place = [[PSYPlace alloc] init];
         place.placeId = i;
         place.name = [NSString stringWithFormat:@"Chinatown Heritage Centre %d", i];
-        place.picture = nil;
+        place.picture = @"http://www.yoursingapore.com/see-do-singapore/culture-heritage/heritage-discovery/chinatown-heritage-centre/_jcr_content/par-carousel/carousel_detailpage/carousel/item_3.thumbnail.carousel-img.740.416.jpg";
         place.rate = @(4);
         place.updatedDate = [[NSDate date] dateByAddingTimeInterval:i];
         place.longitude = @(123.123131);

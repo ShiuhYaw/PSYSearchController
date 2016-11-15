@@ -17,7 +17,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="placeholder" translatesAutoresizingMaskIntoConstraints="NO" id="rZb-cN-SlU"/>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atv-8d-VeP">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qSb-h8-Mme" customClass="PSYTopGradientView">
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="atv-8d-VeP" customClass="PSYGradientView">
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tAY-yw-LOF">
@@ -27,14 +30,36 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xwf-zY-2iE" customClass="HCSStarRatingView">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="tintColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maximumValue">
+                                        <integer key="value" value="5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="allowsHalfStars" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="accurateHalfStars" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="continuous" value="NO"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumValue">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="value">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="3A5-MP-vHw" secondAttribute="bottom" id="2wZ-ug-wwh"/>
                             <constraint firstAttribute="trailing" secondItem="3A5-MP-vHw" secondAttribute="trailing" constant="8" id="9gC-Yd-Sdq"/>
+                            <constraint firstAttribute="trailing" secondItem="xwf-zY-2iE" secondAttribute="trailing" constant="8" id="HDX-pV-1Ou"/>
                             <constraint firstItem="3A5-MP-vHw" firstAttribute="leading" secondItem="tAY-yw-LOF" secondAttribute="leading" id="Vlf-Qg-jgd"/>
+                            <constraint firstItem="xwf-zY-2iE" firstAttribute="width" secondItem="tAY-yw-LOF" secondAttribute="width" multiplier="0.2" id="XIm-sJ-x72"/>
                             <constraint firstItem="3A5-MP-vHw" firstAttribute="top" secondItem="tAY-yw-LOF" secondAttribute="top" id="aKI-94-Aa6"/>
                             <constraint firstAttribute="height" constant="25" id="ndY-CT-czy"/>
+                            <constraint firstItem="xwf-zY-2iE" firstAttribute="height" secondItem="tAY-yw-LOF" secondAttribute="height" multiplier="0.5" id="vQg-fn-UKp"/>
+                            <constraint firstItem="xwf-zY-2iE" firstAttribute="centerY" secondItem="tAY-yw-LOF" secondAttribute="centerY" id="vSq-do-Csg"/>
                         </constraints>
                     </view>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c9F-8R-bUr">
@@ -87,13 +112,17 @@
                     </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="qSb-h8-Mme" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="5RC-Oh-n1F"/>
+                    <constraint firstItem="qSb-h8-Mme" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.5" id="A6e-wz-42t"/>
                     <constraint firstItem="atv-8d-VeP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BDz-0b-sNZ"/>
                     <constraint firstAttribute="trailing" secondItem="atv-8d-VeP" secondAttribute="trailing" id="CQi-jH-uRi"/>
                     <constraint firstAttribute="trailing" secondItem="bzP-dp-OG3" secondAttribute="trailing" id="K3F-99-sSm"/>
                     <constraint firstAttribute="trailing" secondItem="c9F-8R-bUr" secondAttribute="trailing" id="LSt-vf-vRb"/>
                     <constraint firstItem="bzP-dp-OG3" firstAttribute="top" secondItem="c9F-8R-bUr" secondAttribute="bottom" constant="5" id="M77-te-gKt"/>
+                    <constraint firstAttribute="trailing" secondItem="qSb-h8-Mme" secondAttribute="trailing" id="Ypw-0W-CKu"/>
                     <constraint firstAttribute="bottom" secondItem="rZb-cN-SlU" secondAttribute="bottom" id="ZmK-OH-Xtz"/>
                     <constraint firstItem="rZb-cN-SlU" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="aRb-8N-BSK"/>
+                    <constraint firstItem="qSb-h8-Mme" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="ae8-Im-Diq"/>
                     <constraint firstAttribute="bottom" secondItem="bzP-dp-OG3" secondAttribute="bottom" constant="8" id="cWW-4L-tbT"/>
                     <constraint firstItem="tAY-yw-LOF" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="clp-wJ-gvY"/>
                     <constraint firstItem="tAY-yw-LOF" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="gpH-rH-AdW"/>
@@ -117,7 +146,9 @@
                 <outlet property="placeImageView" destination="rZb-cN-SlU" id="nFH-1c-VYZ"/>
                 <outlet property="rateLabel" destination="3A5-MP-vHw" id="MxX-Yi-HwL"/>
                 <outlet property="rateView" destination="tAY-yw-LOF" id="0Hk-q4-g44"/>
+                <outlet property="starRateView" destination="xwf-zY-2iE" id="J8a-2W-gLW"/>
                 <outlet property="titleLabel" destination="w9w-0l-T6E" id="12U-zG-MkO"/>
+                <outlet property="topGradientView" destination="qSb-h8-Mme" id="I5u-TS-aor"/>
             </connections>
             <point key="canvasLocation" x="-87" y="-4"/>
         </tableViewCell>

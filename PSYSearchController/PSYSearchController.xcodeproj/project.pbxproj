@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		2159D3291DDADBC70070E5A9 /* PSYCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D3281DDADBC70070E5A9 /* PSYCategoryTableViewController.m */; };
 		2159D32C1DDADBDD0070E5A9 /* PSYSortTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D32B1DDADBDD0070E5A9 /* PSYSortTableViewController.m */; };
+		2159D32F1DDAF50D0070E5A9 /* PSYGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D32E1DDAF50D0070E5A9 /* PSYGradientView.m */; };
+		2159D3331DDAF92E0070E5A9 /* PSYTopGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D3321DDAF92E0070E5A9 /* PSYTopGradientView.m */; };
 		21A2EAA21DD7631600DCB5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA11DD7631600DCB5BA /* main.m */; };
 		21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA41DD7631600DCB5BA /* AppDelegate.m */; };
 		21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA71DD7631600DCB5BA /* ViewController.m */; };
@@ -57,6 +59,10 @@
 		2159D3281DDADBC70070E5A9 /* PSYCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYCategoryTableViewController.m; sourceTree = "<group>"; };
 		2159D32A1DDADBDD0070E5A9 /* PSYSortTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSortTableViewController.h; sourceTree = "<group>"; };
 		2159D32B1DDADBDD0070E5A9 /* PSYSortTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSortTableViewController.m; sourceTree = "<group>"; };
+		2159D32D1DDAF50D0070E5A9 /* PSYGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYGradientView.h; sourceTree = "<group>"; };
+		2159D32E1DDAF50D0070E5A9 /* PSYGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYGradientView.m; sourceTree = "<group>"; };
+		2159D3311DDAF92E0070E5A9 /* PSYTopGradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYTopGradientView.h; sourceTree = "<group>"; };
+		2159D3321DDAF92E0070E5A9 /* PSYTopGradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYTopGradientView.m; sourceTree = "<group>"; };
 		21A2EA9D1DD7631600DCB5BA /* PSYSearchController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSYSearchController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A2EAA11DD7631600DCB5BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A2EAA31DD7631600DCB5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -537,6 +543,10 @@
 				21B8ADBB1DD971A300E110A9 /* PSYPlaceTableViewCell.h */,
 				21B8ADBC1DD971A300E110A9 /* PSYPlaceTableViewCell.m */,
 				21B8ADBD1DD971A300E110A9 /* PSYPlaceTableViewCell.xib */,
+				2159D32D1DDAF50D0070E5A9 /* PSYGradientView.h */,
+				2159D32E1DDAF50D0070E5A9 /* PSYGradientView.m */,
+				2159D3311DDAF92E0070E5A9 /* PSYTopGradientView.h */,
+				2159D3321DDAF92E0070E5A9 /* PSYTopGradientView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -761,6 +771,8 @@
 				21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */,
 				21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */,
 				2159D3291DDADBC70070E5A9 /* PSYCategoryTableViewController.m in Sources */,
+				2159D3331DDAF92E0070E5A9 /* PSYTopGradientView.m in Sources */,
+				2159D32F1DDAF50D0070E5A9 /* PSYGradientView.m in Sources */,
 				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
 				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
 				21B8ADBE1DD971A300E110A9 /* PSYPlaceTableViewCell.m in Sources */,

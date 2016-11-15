@@ -7,11 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <HCSStarRatingView/HCSStarRatingView.h>
+
+@class PSYGradientView;
+@class PSYTopGradientView;
 
 @interface PSYPlaceTableViewCell : UITableViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *placeImageView;
-@property (weak, nonatomic) IBOutlet UIView *gredientView;
+@property (weak, nonatomic) IBOutlet PSYTopGradientView *topGradientView;
+@property (weak, nonatomic) IBOutlet PSYGradientView *gredientView;
 @property (weak, nonatomic) IBOutlet UIView *rateView;
 @property (weak, nonatomic) IBOutlet UILabel *rateLabel;
 @property (weak, nonatomic) IBOutlet UIView *placeDetailTopView;
@@ -20,5 +25,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *areaLabel;
 @property (weak, nonatomic) IBOutlet UILabel *categoryLabel;
 @property (weak, nonatomic) IBOutlet UILabel *distanceLabel;
+@property (weak, nonatomic) IBOutlet HCSStarRatingView *starRateView;
 
 @end

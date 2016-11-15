@@ -10,6 +10,7 @@
 #import "PSYPlace.h"
 #import "PSYCategory.h"
 #import "PSYPlaceTableViewCell.h"
+#import <AFNetworking/UIImageView+AFNetworking.h>
 
 NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
 
@@ -42,6 +43,9 @@ NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
     currentCell.titleLabel.text = place.name;
     currentCell.categoryLabel.text = place.category.name;
     currentCell.distanceLabel.text = [place.distance stringValue];
+    NSURL *url = [NSURL URLWithString:place.picture];
+    [currentCell.placeImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
+    currentCell.starRateView.value = place.rate.floatValue;
     currentCell.areaLabel.text = @"";
 }
 
