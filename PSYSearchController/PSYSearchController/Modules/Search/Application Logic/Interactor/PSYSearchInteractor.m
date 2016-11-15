@@ -39,7 +39,7 @@
     __weak typeof(self) welf = self;
     [self.dataManager getPlacesWithString:@""
                                  category:self.defaultCategory
-                             sortProperty:@"name"
+                             sortProperty:self.sortProperty
                           completionBlock:^(RLMResults * places){
                               welf.places = places;
                               dispatch_async(dispatch_get_main_queue(), ^{
@@ -53,9 +53,13 @@
     NSString *sortProperty = self.sortProperty;
     if (givenSortProperty != nil) {
         sortProperty =  givenSortProperty;
+        self.sortProperty = givenSortProperty;
     }
     if (givenCategory == nil) {
         givenCategory = self.defaultCategory;
+    }
+    else {
+        self.defaultCategory = givenCategory;
     }
     self.currentPreducate = predicate;
     __weak typeof(self) welf = self;
@@ -81,8 +85,12 @@
     if (givenCategory == nil) {
         givenCategory = self.defaultCategory;
     }
-    if (givenSortProperty != nil && givenSortProperty.length > 0) {
+    else {
+        self.defaultCategory = givenCategory;
+    }
+    if (givenSortProperty != nil) {
         sortProperty = givenSortProperty;
+        self.sortProperty = givenSortProperty;
     }
     __weak typeof(self) welf = self;
     [self.dataManager getPlacesWithString:searchString
@@ -98,9 +106,13 @@
 
 - (void)findPlaceWithSortProperty:(NSString *)givenSortProperty {
     
+    self.sortProperty = givenSortProperty;
     if (self.places.count > 0) {
-        self.sortProperty = givenSortProperty;
-        [self.places sortedResultsUsingProperty:givenSortProperty ascending:true];
+        self.places = [self.places sortedResultsUsingProperty:givenSortProperty ascending:true];
+        [self.output foundPlaces:self.places];
+    }
+    else {
+        [self findPlaceWithPredicate:nil category:nil sortProperty:givenSortProperty];
     }
 }
 
