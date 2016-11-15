@@ -32,6 +32,72 @@
     [self.searchInteractor findPlaceWithSortProperty:sortProperty];
 }
 
+- (void)searchWithString:(NSString *)searchText {
+    
+    NSString *strippedString = [searchText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceCharacterSet]];
+    
+    // break up the search terms (separated by spaces)
+    NSArray *searchItems = nil;
+    if (strippedString.length > 0) {
+        searchItems = [strippedString componentsSeparatedByString:@" "];
+    }
+    else {
+        [self updateView];
+        return;
+    }
+    NSMutableArray *andMatchPredicates = [NSMutableArray array];
+    for (NSString *searchString in searchItems) {
+        NSMutableArray *searchItemsPredicate = [NSMutableArray array];
+        // name field matching
+        NSExpression *lhs = [NSExpression expressionForKeyPath:@"name"];
+        NSExpression *rhs = [NSExpression expressionForConstantValue:searchString];
+        NSPredicate *finalPredicate = [NSComparisonPredicate
+                                       predicateWithLeftExpression:lhs
+                                       rightExpression:rhs
+                                       modifier:NSDirectPredicateModifier
+                                       type:NSContainsPredicateOperatorType
+                                       options:NSCaseInsensitivePredicateOption];
+        [searchItemsPredicate addObject:finalPredicate];
+        
+        lhs = [NSExpression expressionForKeyPath:@"category.name"];
+        rhs = [NSExpression expressionForConstantValue:searchString];
+        finalPredicate = [NSComparisonPredicate
+                          predicateWithLeftExpression:lhs
+                          rightExpression:rhs
+                          modifier:NSDirectPredicateModifier
+                          type:NSContainsPredicateOperatorType
+                          options:NSCaseInsensitivePredicateOption];
+        [searchItemsPredicate addObject:finalPredicate];
+        
+        // yearIntroduced field matching
+        NSNumberFormatter *numberFormatter = [[NSNumberFormatter alloc] init];
+        numberFormatter.numberStyle = NSNumberFormatterNoStyle;
+        NSNumber *targetNumber = [numberFormatter numberFromString:searchString];
+        if (targetNumber != nil) {
+            // rate field matching
+            lhs = [NSExpression expressionForKeyPath:@"rate"];
+            rhs = [NSExpression expressionForConstantValue:targetNumber];
+            finalPredicate = [NSComparisonPredicate
+                              predicateWithLeftExpression:lhs
+                              rightExpression:rhs
+                              modifier:NSDirectPredicateModifier
+                              type:NSEqualToPredicateOperatorType
+                              options:NSCaseInsensitivePredicateOption];
+            [searchItemsPredicate addObject:finalPredicate];
+        }
+        
+        NSCompoundPredicate *orMatchPredicates = [NSCompoundPredicate orPredicateWithSubpredicates:searchItemsPredicate];
+        [andMatchPredicates addObject:orMatchPredicates];
+    }
+    
+    // match up the fields of the Product object
+    NSCompoundPredicate *finalCompoundPredicate = [NSCompoundPredicate andPredicateWithSubpredicates:andMatchPredicates];
+    [self updateViewWithPredicate:finalCompoundPredicate
+                         category:nil
+                     sortProperty:nil];
+
+}
+
 - (void)addPlace {
     
 }

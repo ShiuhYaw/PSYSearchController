@@ -15,5 +15,5 @@
 - (void)updateViewWithPredicate:(NSPredicate *)predicate category:(PSYCategory *)givenCategory sortProperty:(NSString *)sortProperty;
 - (void)updateViewWithSortProperty:(NSString *)sortProperty;
 - (void)addPlace;
-
+- (void)searchWithString:(NSString *)searchString;
 @end
