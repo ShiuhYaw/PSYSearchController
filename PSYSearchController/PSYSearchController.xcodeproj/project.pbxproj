@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2159D3291DDADBC70070E5A9 /* PSYCategoryTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D3281DDADBC70070E5A9 /* PSYCategoryTableViewController.m */; };
+		2159D32C1DDADBDD0070E5A9 /* PSYSortTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D32B1DDADBDD0070E5A9 /* PSYSortTableViewController.m */; };
 		21A2EAA21DD7631600DCB5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA11DD7631600DCB5BA /* main.m */; };
 		21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA41DD7631600DCB5BA /* AppDelegate.m */; };
 		21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA71DD7631600DCB5BA /* ViewController.m */; };
@@ -51,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2159D3271DDADBC70070E5A9 /* PSYCategoryTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYCategoryTableViewController.h; sourceTree = "<group>"; };
+		2159D3281DDADBC70070E5A9 /* PSYCategoryTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYCategoryTableViewController.m; sourceTree = "<group>"; };
+		2159D32A1DDADBDD0070E5A9 /* PSYSortTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PSYSortTableViewController.h; sourceTree = "<group>"; };
+		2159D32B1DDADBDD0070E5A9 /* PSYSortTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PSYSortTableViewController.m; sourceTree = "<group>"; };
 		21A2EA9D1DD7631600DCB5BA /* PSYSearchController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PSYSearchController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		21A2EAA11DD7631600DCB5BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A2EAA31DD7631600DCB5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +137,184 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2159D3111DDADBA00070E5A9 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				2159D3121DDADBA00070E5A9 /* Application Logic */,
+				2159D3161DDADBA00070E5A9 /* Module Interface */,
+				2159D3171DDADBA00070E5A9 /* User Interface */,
+			);
+			path = Category;
+			sourceTree = "<group>";
+		};
+		2159D3121DDADBA00070E5A9 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2159D3131DDADBA00070E5A9 /* Interactor */,
+				2159D3141DDADBA00070E5A9 /* Manager */,
+				2159D3151DDADBA00070E5A9 /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		2159D3131DDADBA00070E5A9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2159D3141DDADBA00070E5A9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2159D3151DDADBA00070E5A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2159D3161DDADBA00070E5A9 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		2159D3171DDADBA00070E5A9 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2159D3181DDADBA00070E5A9 /* Presenter */,
+				2159D3191DDADBA00070E5A9 /* Transition */,
+				2159D31A1DDADBA00070E5A9 /* View */,
+				2159D31B1DDADBA00070E5A9 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		2159D3181DDADBA00070E5A9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2159D3191DDADBA00070E5A9 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		2159D31A1DDADBA00070E5A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2159D3271DDADBC70070E5A9 /* PSYCategoryTableViewController.h */,
+				2159D3281DDADBC70070E5A9 /* PSYCategoryTableViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2159D31B1DDADBA00070E5A9 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		2159D31C1DDADBA00070E5A9 /* Sort */ = {
+			isa = PBXGroup;
+			children = (
+				2159D31D1DDADBA00070E5A9 /* Application Logic */,
+				2159D3211DDADBA00070E5A9 /* Module Interface */,
+				2159D3221DDADBA00070E5A9 /* User Interface */,
+			);
+			path = Sort;
+			sourceTree = "<group>";
+		};
+		2159D31D1DDADBA00070E5A9 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				2159D31E1DDADBA00070E5A9 /* Interactor */,
+				2159D31F1DDADBA00070E5A9 /* Manager */,
+				2159D3201DDADBA00070E5A9 /* Model */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		2159D31E1DDADBA00070E5A9 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		2159D31F1DDADBA00070E5A9 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2159D3201DDADBA00070E5A9 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2159D3211DDADBA00070E5A9 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		2159D3221DDADBA00070E5A9 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				2159D3231DDADBA00070E5A9 /* Presenter */,
+				2159D3241DDADBA00070E5A9 /* Transition */,
+				2159D3251DDADBA00070E5A9 /* View */,
+				2159D3261DDADBA00070E5A9 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		2159D3231DDADBA00070E5A9 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		2159D3241DDADBA00070E5A9 /* Transition */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Transition;
+			sourceTree = "<group>";
+		};
+		2159D3251DDADBA00070E5A9 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2159D32A1DDADBDD0070E5A9 /* PSYSortTableViewController.h */,
+				2159D32B1DDADBDD0070E5A9 /* PSYSortTableViewController.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2159D3261DDADBA00070E5A9 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		21A2EA941DD7631600DCB5BA = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +387,8 @@
 		21A2EAD71DD7664700DCB5BA /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				2159D3111DDADBA00070E5A9 /* Category */,
+				2159D31C1DDADBA00070E5A9 /* Sort */,
 				21A2EAD81DD7664700DCB5BA /* Search */,
 			);
 			path = Modules;
@@ -574,11 +760,13 @@
 				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
 				21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */,
 				21A2EB0C1DD770B000DCB5BA /* PSYAppDependencies.m in Sources */,
+				2159D3291DDADBC70070E5A9 /* PSYCategoryTableViewController.m in Sources */,
 				21A2EAE91DD7675200DCB5BA /* PSYBaseTableViewController.m in Sources */,
 				21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */,
 				21B8ADBE1DD971A300E110A9 /* PSYPlaceTableViewCell.m in Sources */,
 				21A2EAA21DD7631600DCB5BA /* main.m in Sources */,
 				21A2EB031DD76D4F00DCB5BA /* PSYPlaceDataManager.m in Sources */,
+				2159D32C1DDADBDD0070E5A9 /* PSYSortTableViewController.m in Sources */,
 				21A2EB131DD7774B00DCB5BA /* PSYDataStore.m in Sources */,
 				21A2EB0F1DD771A100DCB5BA /* PSYRootWireframe.m in Sources */,
 				21A2EAEC1DD767E300DCB5BA /* PSYPlace.m in Sources */,

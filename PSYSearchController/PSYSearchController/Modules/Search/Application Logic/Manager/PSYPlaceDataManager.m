@@ -28,10 +28,10 @@
 
     NSPredicate *predicate = nil;
     if (searchString.length > 0) {
-        predicate = [NSPredicate predicateWithFormat:@"(category.name = %@) AND name = %@", category.name, searchString];
+        predicate = [NSPredicate predicateWithFormat:@"(category.categoryId = %d) AND name = %@", category.categoryId, searchString];
     }
     else {
-        predicate = [NSPredicate predicateWithFormat:@"(category.name = %@)", category.name];
+        predicate = [NSPredicate predicateWithFormat:@"(category.categoryId = %d)", category.categoryId];
     }
     [self.dataStore fetchEntriesWithPredicate:predicate
                                  sortProperty:sortProperty
@@ -48,6 +48,12 @@
                sortProperty:(NSString *)sortProperty
             completionBlock:(void(^)(RLMResults * places))completionBlock {
     
+    if (!predicate) {
+        predicate = [NSPredicate predicateWithFormat:@"(category.categoryId = %d)", category.categoryId];
+    }
+    if (!sortProperty) {
+        sortProperty = @"name";
+    }
     [self.dataStore fetchEntriesWithPredicate:predicate
                                  sortProperty:sortProperty
                               completionBlock:^(RLMResults *results) {

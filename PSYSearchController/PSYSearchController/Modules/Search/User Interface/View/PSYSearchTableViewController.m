@@ -8,6 +8,8 @@
 
 #import "PSYSearchTableViewController.h"
 #import "PSYPlaceTableViewCell.h"
+#import "PSYCategoryTableViewController.h"
+#import "PSYSortTableViewController.h"
 
 
 @interface PSYSearchTableViewController () <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
@@ -18,6 +20,10 @@
 
 @property (nonatomic, strong) RLMResults    *places;
 @property (nonatomic, strong) UITableView   *strongTableView;
+@property (nonatomic, strong) PSYCategoryTableViewController   *categoryTableViewController;
+@property (nonatomic, strong) PSYSortTableViewController   *sortTableViewController;
+@property (nonatomic, strong) NSCompoundPredicate *finalCompoundPredicate;
+@property (nonatomic, assign) BOOL isLaunched;
 @end
 
 @implementation PSYSearchTableViewController
@@ -25,6 +31,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.isLaunched = false;
     self.strongTableView = self.tableView;
     _searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
@@ -42,7 +49,9 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     [super viewWillAppear:animated];
-    [self.eventHandler updateView];
+    if (!self.isLaunched) {
+        [self.eventHandler updateView];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -252,7 +261,8 @@ NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
 #pragma mark - PSYSearchViewInterface
 - (void)showNoContentMessage {
 
-    self.view = self.noContentView;
+    self.view = self.strongTableView;
+    
 }
 
 - (void)showPlacesData:(RLMResults *)results {
@@ -265,6 +275,43 @@ NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
 - (void)reloadPlaces {
 
     [self.strongTableView reloadData];
+}
+
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    
+    self.isLaunched = true;
+    NSString *segueIdentifier = segue.identifier;
+    if ([segueIdentifier isEqualToString:@"categorySegueIdentifier"]) {
+        if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navigationController = segue.destinationViewController;
+            if ([navigationController.topViewController isKindOfClass:[PSYCategoryTableViewController class]]) {
+                self.categoryTableViewController = (PSYCategoryTableViewController *)navigationController.topViewController;
+            }
+            else {
+                return;
+            }
+            __weak typeof(self) welf = self;
+            self.categoryTableViewController.category = ^(PSYCategory *category) {
+                [welf.eventHandler updateViewWithPredicate:welf.finalCompoundPredicate category:category sortProperty:nil];
+            };
+        }
+    }
+    if ([segueIdentifier isEqualToString:@"sortSegueIdentifier"]) {
+        if ([segue.destinationViewController isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *navigationController = segue.destinationViewController;
+            if ([navigationController.topViewController isKindOfClass:[PSYSortTableViewController class]]) {
+                self.sortTableViewController = (PSYSortTableViewController *)navigationController.topViewController;
+            }
+            else {
+                return;
+            }
+            __weak typeof(self) welf = self;
+            self.sortTableViewController.sortProperty = ^(NSString * sortProperty) {
+                [welf.eventHandler updateViewWithSortProperty:sortProperty];
+            };
+        }
+    }
 }
 
 @end

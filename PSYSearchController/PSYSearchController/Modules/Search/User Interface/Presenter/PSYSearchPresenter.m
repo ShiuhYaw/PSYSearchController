@@ -40,12 +40,12 @@
 
 - (void)foundPlaces:(RLMResults *)places {
     
-    if (places.count > 0) {
-        [self.userInterface showPlacesData:places];
-    } else {
-        [self.userInterface showNoContentMessage];
-
-    }
+//    if (places.count > 0) {
+//        [self.userInterface showPlacesData:places];
+//    } else {
+//        [self.userInterface showNoContentMessage];
+//    }
+    [self.userInterface showPlacesData:places];
 }
 
 
