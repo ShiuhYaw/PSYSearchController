@@ -13,7 +13,6 @@
 		2159D3331DDAF92E0070E5A9 /* PSYTopGradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = 2159D3321DDAF92E0070E5A9 /* PSYTopGradientView.m */; };
 		21A2EAA21DD7631600DCB5BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA11DD7631600DCB5BA /* main.m */; };
 		21A2EAA51DD7631600DCB5BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA41DD7631600DCB5BA /* AppDelegate.m */; };
-		21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 21A2EAA71DD7631600DCB5BA /* ViewController.m */; };
 		21A2EAAB1DD7631600DCB5BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAA91DD7631600DCB5BA /* Main.storyboard */; };
 		21A2EAAD1DD7631600DCB5BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */; };
 		21A2EAB01DD7631600DCB5BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 21A2EAAE1DD7631600DCB5BA /* LaunchScreen.storyboard */; };
@@ -67,8 +66,6 @@
 		21A2EAA11DD7631600DCB5BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		21A2EAA31DD7631600DCB5BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		21A2EAA41DD7631600DCB5BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		21A2EAA61DD7631600DCB5BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		21A2EAA71DD7631600DCB5BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		21A2EAAA1DD7631600DCB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		21A2EAAF1DD7631600DCB5BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -352,8 +349,6 @@
 				21A2EAA41DD7631600DCB5BA /* AppDelegate.m */,
 				21A2EB0A1DD770B000DCB5BA /* PSYAppDependencies.h */,
 				21A2EB0B1DD770B000DCB5BA /* PSYAppDependencies.m */,
-				21A2EAA61DD7631600DCB5BA /* ViewController.h */,
-				21A2EAA71DD7631600DCB5BA /* ViewController.m */,
 				21A2EAA91DD7631600DCB5BA /* Main.storyboard */,
 				21A2EAAC1DD7631600DCB5BA /* Assets.xcassets */,
 				21A2EAAE1DD7631600DCB5BA /* LaunchScreen.storyboard */,
@@ -765,7 +760,6 @@
 				21A2EB191DD7812B00DCB5BA /* PSYCategory.m in Sources */,
 				21A2EB091DD76DDF00DCB5BA /* PSYSearchPresentationTransistion.m in Sources */,
 				21A2EAEF1DD769A900DCB5BA /* PSYSearchTableViewController.m in Sources */,
-				21A2EAA81DD7631600DCB5BA /* ViewController.m in Sources */,
 				21A2EB061DD76DCD00DCB5BA /* PSYSearchDismissalTransition.m in Sources */,
 				21A2EAF51DD76AF300DCB5BA /* PSYSearchWireframe.m in Sources */,
 				21A2EAFA1DD76C3900DCB5BA /* PSYSearchPresenter.m in Sources */,
