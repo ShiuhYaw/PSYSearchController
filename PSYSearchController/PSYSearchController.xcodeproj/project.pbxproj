@@ -642,6 +642,7 @@
 				TargetAttributes = {
 					21A2EA9C1DD7631600DCB5BA = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = MWEQBX5HPE;
 						ProvisioningStyle = Automatic;
 					};
 					21A2EAB51DD7631600DCB5BA = {
@@ -926,6 +927,7 @@
 			baseConfigurationReference = 5854C5BDE7D8A0470F3394DE /* Pods-PSYSearchController.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MWEQBX5HPE;
 				GCC_PREFIX_HEADER = "PSYSearchController/PSYSearchController-Prefix.pch";
 				INFOPLIST_FILE = PSYSearchController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -939,6 +941,7 @@
 			baseConfigurationReference = BA407D6C7248A4BE4F25054F /* Pods-PSYSearchController.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = MWEQBX5HPE;
 				GCC_PREFIX_HEADER = "PSYSearchController/PSYSearchController-Prefix.pch";
 				INFOPLIST_FILE = PSYSearchController/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

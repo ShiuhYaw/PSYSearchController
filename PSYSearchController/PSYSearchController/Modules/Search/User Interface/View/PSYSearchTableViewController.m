@@ -11,6 +11,13 @@
 #import "PSYCategoryTableViewController.h"
 #import "PSYSortTableViewController.h"
 
+#pragma mark - UIStateRestoration
+NSString *const ViewControllerTitleKey = @"ViewControllerTitleKey";
+NSString *const SearchControllerIsActiveKey = @"SearchControllerIsActiveKey";
+NSString *const SearchBarTextKey = @"SearchBarTextKey";
+NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
+NSInteger const PSYNumberOfSection = 1;
+CGFloat const PSYTableCellViewHeight = 200.0;
 
 @interface PSYSearchTableViewController () <UISearchBarDelegate, UISearchControllerDelegate, UISearchResultsUpdating>
 
@@ -88,7 +95,7 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     
-    return 1;
+    return PSYNumberOfSection;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -102,7 +109,7 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    return 200.0;
+    return PSYTableCellViewHeight;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -155,53 +162,26 @@
 }
 
 #pragma mark - UIStateRestoration
-NSString *const ViewControllerTitleKey = @"ViewControllerTitleKey";
-NSString *const SearchControllerIsActiveKey = @"SearchControllerIsActiveKey";
-NSString *const SearchBarTextKey = @"SearchBarTextKey";
-NSString *const SearchBarIsFirstResponderKey = @"SearchBarIsFirstResponderKey";
 
 - (void)encodeRestorableStateWithCoder:(NSCoder *)coder {
     [super encodeRestorableStateWithCoder:coder];
     
-    // encode the view state so it can be restored later
-    
-    // encode the title
     [coder encodeObject:self.title forKey:ViewControllerTitleKey];
-    
     UISearchController *searchController = self.searchController;
-    
-    // encode the search controller's active state
     BOOL searchDisplayControllerIsActive = searchController.isActive;
     [coder encodeBool:searchDisplayControllerIsActive forKey:SearchControllerIsActiveKey];
-    
-    // encode the first responser status
     if (searchDisplayControllerIsActive) {
         [coder encodeBool:[searchController.searchBar isFirstResponder] forKey:SearchBarIsFirstResponderKey];
     }
-    
-    // encode the search bar text
     [coder encodeObject:searchController.searchBar.text forKey:SearchBarTextKey];
 }
 
 - (void)decodeRestorableStateWithCoder:(NSCoder *)coder {
     [super decodeRestorableStateWithCoder:coder];
     
-    // restore the title
     self.title = [coder decodeObjectForKey:ViewControllerTitleKey];
-    
-    // restore the active state:
-    // we can't make the searchController active here since it's not part of the view
-    // hierarchy yet, instead we do it in viewWillAppear
-    //
     _searchControllerWasActive = [coder decodeBoolForKey:SearchControllerIsActiveKey];
-    
-    // restore the first responder status:
-    // we can't make the searchController first responder here since it's not part of the view
-    // hierarchy yet, instead we do it in viewWillAppear
-    //
     _searchControllerSearchFieldWasFirstResponder = [coder decodeBoolForKey:SearchBarIsFirstResponderKey];
-    
-    // restore the text in the search field
     self.searchController.searchBar.text = [coder decodeObjectForKey:SearchBarTextKey];
 }
 
