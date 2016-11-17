@@ -17,6 +17,7 @@
 @property (nonatomic, strong) NSString *sortProperty ;
 @property (nonatomic, strong) RLMResults *places ;
 @property (nonatomic, strong) NSPredicate *currentPreducate;
+@property (nonatomic, strong) NSTimer * searchTimer;
 @end
 
 @implementation PSYSearchInteractor
@@ -28,6 +29,7 @@
         _dataManager = dataManager;
         _sortProperty = @"name";
         _defaultCategory = [PSYCategory objectForPrimaryKey:@(1)];
+        _searchTimer = nil;
     }
     return self;
 }
@@ -62,18 +64,46 @@
         self.defaultCategory = givenCategory;
     }
     self.currentPreducate = predicate;
-    __weak typeof(self) welf = self;
-    [self.dataManager getPlacesWithPredicate:predicate
-                                    category:givenCategory
-                                sortProperty:sortProperty
-                             completionBlock:^(RLMResults *places) {
-                                 welf.places = places;
-                                 dispatch_async(dispatch_get_main_queue(), ^{
-                                     [welf.output foundPlaces:places];
-                                 });
-
-    }];
+    [self fireSearchTimer];
+//    __weak typeof(self) welf = self;
+//    [self.dataManager getPlacesWithPredicate:predicate
+//                                    category:givenCategory
+//                                sortProperty:sortProperty
+//                             completionBlock:^(RLMResults *places) {
+//                                 welf.places = places;
+//                                 dispatch_async(dispatch_get_main_queue(), ^{
+//                                     [welf.output foundPlaces:places];
+//                                 });
+//
+//    }];
 }
+
+-(void)fireSearchTimer {
+    
+    if (self.searchTimer == nil) {
+        __weak typeof(self) welf = self;
+        self.searchTimer = [NSTimer timerWithTimeInterval:2 repeats:false block:^(NSTimer * _Nonnull timer) {
+            [welf.dataManager getPlacesWithPredicate:welf.currentPreducate
+                                            category:welf.defaultCategory
+                                        sortProperty:welf.sortProperty
+                                     completionBlock:^(RLMResults *places) {
+                                         welf.places = places;
+                                         dispatch_async(dispatch_get_main_queue(), ^{
+                                             [welf.output foundPlaces:places];
+                                         });
+             }];
+            [welf.searchTimer invalidate];
+            welf.searchTimer = nil;
+        }];
+        [self.searchTimer fire];
+    }
+    else {
+        [self.searchTimer invalidate];
+        self.searchTimer = nil;
+        [self fireSearchTimer];
+    }
+}
+
 
 - (void)findPlaceWithSearchString:(NSString *)string category:(PSYCategory *)givenCategory sortProperty:(NSString *)givenSortProperty {
     
