@@ -24,6 +24,7 @@
 @property (nonatomic, strong) PSYSearchWireframe *searchWireframe;
 @property (strong, nonatomic) IBOutlet CLLocationManager *locationManager;
 @property (strong, nonatomic) PSYDataStore *dataStore;
+@property (strong, nonatomic) PSYSearchPresenter *searchPresenter;
 
 @end
 
@@ -53,17 +54,17 @@
     
     // Search Modules Classes
     PSYSearchWireframe *searchWireframe = [[PSYSearchWireframe alloc] init];
-    PSYSearchPresenter *searchPresenter = [[PSYSearchPresenter alloc] init];
+    self.searchPresenter = [[PSYSearchPresenter alloc] init];
     PSYPlaceDataManager *spaceDataManager = [[PSYPlaceDataManager alloc] init];
     PSYSearchInteractor *searchInteractor = [[PSYSearchInteractor alloc] initDataManager:spaceDataManager];
     
     // Search Module Classes
-    searchInteractor.output = searchPresenter;
+    searchInteractor.output = self.searchPresenter;
     
-    searchPresenter.searchInteractor = searchInteractor;
-    searchPresenter.searchWireframe = searchWireframe;
+    self.searchPresenter.searchInteractor = searchInteractor;
+    self.searchPresenter.searchWireframe = searchWireframe;
     
-    searchWireframe.searchPresenter = searchPresenter;
+    searchWireframe.searchPresenter = self.searchPresenter;
     searchWireframe.rootWireframe = rootWireframe;
     self.searchWireframe = searchWireframe;
     
@@ -121,7 +122,7 @@
         NSNumber *latitude = @(103.851959 + (i/10));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(1)];
         [self.dataStore save:place];
     }
@@ -136,7 +137,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(1)];
         [self.dataStore save:place];
     }
@@ -151,7 +152,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(1)];
         [self.dataStore save:place];
     }
@@ -166,7 +167,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(1)];
         [self.dataStore save:place];
     }
@@ -181,7 +182,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(1)];
         [self.dataStore save:place];
     }
@@ -197,7 +198,7 @@
         place.longitude = longitude;
         place.latitude = latitude;
         
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(2)];
         [self.dataStore save:place];
     }
@@ -212,7 +213,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(2)];
         [self.dataStore save:place];
     }
@@ -228,7 +229,7 @@
         place.longitude = longitude;
         place.latitude = latitude;
         
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(2)];
         [self.dataStore save:place];
     }
@@ -244,7 +245,7 @@
         place.longitude = longitude;
         place.latitude = latitude;
         
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(2)];
         [self.dataStore save:place];
     }
@@ -259,7 +260,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(2)];
         [self.dataStore save:place];
     }
@@ -275,7 +276,7 @@
         place.longitude = longitude;
         place.latitude = latitude;
         
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(3)];
         [self.dataStore save:place];
     }
@@ -291,7 +292,7 @@
         place.longitude = longitude;
         place.latitude = latitude;
         
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(4)];
         [self.dataStore save:place];
     }
@@ -306,7 +307,7 @@
         NSNumber *longitude = @(103.851959 + (i/100));
         place.longitude = longitude;
         place.latitude = latitude;
-        place.distance = @(21312);
+        place.distance = @(0);
         place.category = [PSYCategory objectForPrimaryKey:@(5)];
         [self.dataStore save:place];
     }
@@ -328,7 +329,6 @@
         default:
             break;
     }
-
 }
 
 - (void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
@@ -341,6 +341,9 @@
         [realm beginWriteTransaction];
         [PSYPlace createOrUpdateInRealm:realm withValue:@{@"placeId": @(place.placeId), @"distance":  @(distance)}];
         [realm commitWriteTransaction];
+    }
+    if (self.searchPresenter != nil) {
+        [self.searchPresenter updateView];
     }
 }
 
