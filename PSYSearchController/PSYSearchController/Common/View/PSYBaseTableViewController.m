@@ -11,10 +11,12 @@
 #import "PSYCategory.h"
 #import "PSYPlaceTableViewCell.h"
 #import <AFNetworking/UIImageView+AFNetworking.h>
+#import <MapKit/MapKit.h>
 
 NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
 
 @interface PSYBaseTableViewController ()
+@property(nonatomic, strong) MKDistanceFormatter *df;
 
 @end
 
@@ -22,6 +24,8 @@ NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.df = [[MKDistanceFormatter alloc]init];
+    self.df.unitStyle = MKDistanceFormatterUnitStyleAbbreviated;
     [self.tableView registerNib:[UINib nibWithNibName:kCellIdentifier bundle:[NSBundle mainBundle]] forCellReuseIdentifier:kCellIdentifier];
 
     // Uncomment the following line to preserve selection between presentations.
@@ -42,7 +46,8 @@ NSString *const kCellIdentifier = @"PSYPlaceTableViewCell";
     currentCell.rateLabel.text = [place.rate stringValue];
     currentCell.titleLabel.text = place.name;
     currentCell.categoryLabel.text = place.category.name;
-    currentCell.distanceLabel.text = [place.distance stringValue];
+    NSString *prettyString = [self.df stringFromDistance:place.distance.floatValue];
+    currentCell.distanceLabel.text = prettyString;
     NSURL *url = [NSURL URLWithString:place.picture];
     [currentCell.placeImageView setImageWithURL:url placeholderImage:[UIImage imageNamed:@"placeholder"]];
     currentCell.starRateView.value = place.rate.floatValue;
